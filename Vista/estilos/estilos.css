@@ -36,7 +36,8 @@ section{
     font-size: 4rem;
 }
 
-/* Boton */
+/* Botones */
+.btn,
 .white-btn{
    display: inline-block;
    margin-top: 1rem;
@@ -53,6 +54,56 @@ section{
    color:var(--black);
 }
 
+/* Form containers - Registro | Inicio de sesion */
+.form-container{
+    min-height: 100vh;
+    background-color: var(--light-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.form-container form{
+    padding: 2rem;
+    width: 50rem;
+    border-radius: .5rem;
+    border: var(--border);
+    background-color: var(--white);
+    text-align: center;
+}
+.form-container form img{
+    width: 5rem;
+}
+.form-container form h3{
+    font-size: 2.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+.form-container form .box{
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.2rem 1.4rem;
+    margin: 1rem 0;
+    border: var(--border);
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+}
+.form-container form div{
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right:1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.form-container form p{
+    padding-top: 1.5rem;
+    font-size: 1.5rem;   
+}
+.form-container form p a{
+    color: var(--light-orange);
+}
 
 /* Inicio Encabezado */
 .header .header-1{
@@ -169,7 +220,7 @@ section{
 
 /* Seccion promociones */
 .promociones{
-    background-color: var(--light-pink);
+    background-color: var(--light-bg);
  }
 .promociones h3{
     font-size: 4rem;
@@ -202,7 +253,7 @@ section{
 
 /* Pie de Pagina */
 .footer{
-    background-color: var(--light-bg);
+    background-color: var(--light-pink);
  }
 
 .footer .box-container{

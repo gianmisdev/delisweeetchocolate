@@ -6,29 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
     <!--ESTILOS-->
-    <link rel="stylesheet" href="Vista/estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
 </head>
+
 <body>
-    <div class="form-registro">
-        <img src="#" alt="">
-        <form action="#">
-                <div>
-                    <label for="fnom">Nombre</label>
-                    <input type="text" id="fnom" name="fnom">
-                </div>
-                <div>
-                    <label for="fape">Apellidos</label>
-                    <input type="text" id="fape" name="fape">
-                </div>
-                <div>
-                    <label for="fcel">Celular</label>
-                    <input type="number" id="fcel" name="fcel">
-                </div>
-                <div>
-                    <label for="fcorreo">Correo</label>
-                    <input type="text" id="fcorreo" name="fcorreo">
-                </div>
-                <input type="submit" value="Registrarse">
+
+    <div class="form-container">
+
+        <form action="#" method="post">
+            <a href="index.html"><img src="img/logo.png" alt=""></a>
+            <h3>Registrate</h3>
+
+            <div>
+                <label for="fnom">Nombres</label>
+                <input type="text" id="fnom" name="fnom" required class="box">
+            </div>
+            <div>
+                <label for="fape">Apellidos</label>
+                <input type="text" id="fape" name="fape" required class="box">
+            </div>
+            <div>
+                <label for="fcel">Celular</label>
+                <input type="number" id="fcel" name="fcel" required class="box">
+            </div>
+            <div>
+                <label for="fcorreo">Correo</label>
+                <input type="email" id="fcorreo" name="fcorreo" required class="box">
+            </div>
+            <div>
+                <label for="fcontraseña">Contraseña</label>
+                <input type="password" id="fcontraseña" name="fcontraseña" required class="box">
+            </div>
+            <div>
+                <label for="fcontraseña">Confirma tu contraseña</label>
+                <input type="password" id="fccontraseña" name="fccontraseña" required class="box">
+            </div>
+            <input type="submit" name="submit" value="Registrarse" class="btn">
+            <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
         </form>
     </div>
 </body>
