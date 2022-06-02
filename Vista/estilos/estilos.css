@@ -37,6 +37,12 @@ section {
     color: var(--black);
     font-size: 4rem;
 }
+h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    color:var(--black);
+}
 
 /* Botones */
 .btn,
@@ -150,7 +156,7 @@ section {
 }
 
 .header .header-2 .flex {
-    padding: 2rem;
+    padding: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -431,6 +437,77 @@ section {
     margin-top: 40px;
     font-size: 3rem !important;
 }
+
+
+/* Plantilla de la caja */
+
+.container {
+    background-color: #f7ecd9;
+    border-radius: .5rem;
+    border: var(--border);
+    padding: 7rem;
+    max-width: 50rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.container .wrapper {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 3px dashed #c2cdda;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wrapper .image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+.wrapper .text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #5B5B7B;
+}
+    /* Box selector */
+select {
+    width: 100%;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    border: 2px solid var(--light-yellow);
+    box-shadow: 0 1rem 1rem #efefef;
+    appearance: none;
+    background: var(--light-bg) url(/Vista/img/arrow-down.png) no-repeat;
+    background-position: 95% 55%;
+    background-size: 22px;
+}
+
+
+
+
+
+
+
 
 /* media queries  */
 
