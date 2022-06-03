@@ -8,49 +8,20 @@ session_start();
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- estilos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/Vista/estilos/admin.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <title>Admin - Agregar Producto</title>
 </head>
-<body style="background-color:#f7ecd9;">
+
 <body>
-    <div class="container-fluid">
-        <!-- BARRA NAVEGACIÓN -->
-        <div class="bg-warning">
-            <nav class="navbar navbar-brand mb-0 h1 navbar-expand-md border-2 border-bottom border-primary">
-                <div class="container-fluid">
-                <a class="navbar-brand" href="/Vista/Admin/IndexAdmin.php">
-                    <img src="\Vista\img\logo.png" alt="MAIOT" width="50" height="42" class="d-inline-block align-text-middle">
-                    Administración de MAIOT
-                </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#MenuNavegacion" aria-expanded="true">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                </div>
-                <div id="MenuNavegacion" class="navbar-collapse collapse show" style="">
-                    <ul class="navbar-nav ms-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/Vista/Admin/Usuario/IndexUsuario.php">Usuario</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Vista/Admin/Producto/IndexProducto.php">Producto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pedido</a>
-                        </li>
-                        
-                    </ul>
-                    <ul class="navbar-nav ms-3">
-                        <li class="nav-item">
-                            <a class="nav-link text-nowrap" href="http://localhost/Vista/login.php">Cerrar Sesion</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
+    
+    <?php include('../header.php')?>
+
+
     <div class="container mt-5">
         <?php include('MensajeP.php'); ?>
         <div class="row">
@@ -91,6 +62,10 @@ session_start();
         </div>
     </div>
 
+
+    <!-- script header -->
+    <script src="/Vista/js/script.js"></script>
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
