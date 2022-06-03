@@ -3,7 +3,7 @@
     <div class="box-container">
         <div class="box">
             <div class="logo">
-                <a href="#"><img src="img/logo.png"></a>
+                <a href="/Vista/index.php"><img src="img/logo.png"></a>
             </div>
             <p>
                 Misión
@@ -11,10 +11,9 @@
                 tempor incididunt ut labore et dolore magna aliqua”.
             </p>
         </div>
-
         <div class="box">
             <p><a href="#">INICIO</a></p>
-            <p><a href="#">PRODUCTOS</a></p>
+            <p><a href="/Vista/index.php">PRODUCTOS</a></p>
             <p><a href="#">PROMOCIONES</a></p>
             <p><a href="#">CONTACTO</a></p>
         </div>
@@ -26,5 +25,3 @@
         </div>
     </div>
 </section>
-
-<p class="credit"> &copy; <b>Delisweetchocolate</b> - 2022 Todos los Derechos Reservados</p>

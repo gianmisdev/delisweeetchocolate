@@ -14,10 +14,7 @@ window.onscroll = () => {
    }
 }
 
-
 // Validar correo
-
-
 function validar() {
    var correo, contrasena;
    correo = document.getElementById("fcorreo").value;
@@ -35,7 +32,6 @@ function validar() {
    }
    return true;
 }
-
 
 // Personalizar brownie
 
@@ -66,6 +62,4 @@ function mostrarcombo() {
    chkChochips.checked ? elementchochips.style.display = "block" : elementchochips.style.display = "none";
    chkGomitas.checked ? elementGomitas.style.display = "block" : elementGomitas.style.display = "none";
    chkChispitas.checked ? elementChispitas.style.display = "block" : elementChispitas.style.display = "none";
-
-
 }

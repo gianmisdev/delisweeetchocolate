@@ -7,18 +7,17 @@
                 <a href="#" class="fab fa-instagram"></a>
                 <a href="#" class="fab fa-whatsapp"></a>
             </div>
-            <p> Nuevo <a href="login.html">Login</a> | <a href="registrarse.html">Registro</a> </p>
+            <p><a href="login.php">Login</a> | <a href="registrarse.html">Registrarse</a> </p>
         </div>
     </div>
-
     <div class="header-2">
         <div class="flex">
             <div class="logo">
-                <a href="#"><img src="img/logo.png"></a>
+                <a href="/Vista/index.php"><img src="img/logo.png"></a>
             </div>
             <!--BURGER NAVBAR INICIO-->
             <nav class="navbar">
-                <a href="#">Catalogo</a>
+                <a href="/Vista/index.php">Catalogo</a>
                 <a href="#">Promociones</a>
                 <a href="#">Contacto</a>
                 <a href="#">Nosotros</a>

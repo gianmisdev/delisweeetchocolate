@@ -20,10 +20,10 @@
         <h3>Elige un diseño para tu caja</h3>
         <div class="wrapper">
             <div class="image" id="plantilla1">
-                <img src="img/brownies.jpg" alt="">
+                <img src="/Vista/img/brownies.jpg" alt="">
             </div>
             <div class="image" id="plantilla2">
-                <img src="img/brownie_genérico.jpg" alt="">
+                <img src="/Vista/img/brownie_genérico.jpg" alt="">
             </div>
             <div class="image" id="seleccionar">
                 <p class="text">No haz elegido una plantilla</p>
