@@ -8,16 +8,11 @@ if (isset($_POST['registrar'])) {
     $dni = $_POST['fdni'];
     $correo = $_POST['fcorreo'];
     $contraseña = $_POST['fcontraseña'];
-    $query = "
-    SELECT IF( EXISTS(
-      SELECT * FROM usuario
-      WHERE correo = '$correo'), 'Existe', 'No existe') as Resultado;
-    CALL pa_agregar_Usuario('','$nombre', '$apellido', '$contraseña', '$dni', '$correo');
-    END";
+    $query = "CALL pa_agregar_Usuario('','$nombre', '$apellido', '$contraseña', '$dni', '$correo');";
       
     $result = mysqli_query($conn, $query);
 
-    header('Location: login.html');
+    header('Location: login.php');
 
 }else{
   ?>

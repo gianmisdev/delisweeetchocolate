@@ -26,14 +26,14 @@ if(isset($_POST['EliminarUsuario']))
 if(isset($_POST['actualizarU']))
 {
     $UsuarioID = mysqli_real_escape_string($conn, $_POST['Eid']);
-
+    $rol = mysqli_real_escape_string($conn, $_POST['Erol']);
     $nombre = mysqli_real_escape_string($conn, $_POST['Enombre']);
     $apellido = mysqli_real_escape_string($conn, $_POST['Eapellido']);
     $contraseña = mysqli_real_escape_string($conn, $_POST['Econtraseña']);
     $dni = mysqli_real_escape_string($conn, $_POST['Edni']);
     $correo = mysqli_real_escape_string($conn, $_POST['Ecorreo']);
 
-    $conA = "CALL pa_actualizar_Usuario('$UsuarioID', '','$nombre', '$apellido', '$contraseña', '$dni', '$correo')";
+    $conA = "update usuario set idRol='$rol',nombre='$nombre',apellido='$apellido',Contraseña='$contraseña',dni='$dni',correo='$correo' where idUsuario='$UsuarioID'";
     $resA = mysqli_query($conn, $conA);
 
     if($resA)

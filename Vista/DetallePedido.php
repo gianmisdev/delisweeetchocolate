@@ -2,16 +2,25 @@
 include('conexion.php');
 //INSERTAR FILA DETALLE_PRODUCTO Y CARGAR DELIVERY
 if (isset($_POST['OrdenNext'])) {
+    $IDusuario = $_POST['Aid'];
     $IDproducto = $_POST['Pid'];
     $Precio = $_POST['Pprecio'];
     $Cantidad = $_POST['Pcan'];
     $Importe = $_POST['Pimp'];
     $Envio = $_POST['Penv'];
     $Total = $_POST['Ptot'];
-    $query = "insert into detalle_pedido(idProducto, PrecioUnitario, Cantidad, Importe, PrecioEnvio, SubTotal)values('$IDproducto', '$Precio', '$Cantidad', '$Importe', '$Envio', '$Total');";
-    $result = mysqli_query($conn, $query);
+    $Direccion = $_POST['Pdir'];
+    $CodigoPostal = $_POST['Pcod'];
+    $Referencia = $_POST['Pref'];
 
-    header('Location: Delivery.html');
+    $InfoEnvio = "insert into informacion_envio(DireccionEnvio, CodigoPostal, Referencia)values('$Direccion', '$CodigoPostal', '$Referencia');";
+    $ResEnvio = mysqli_query($conn, $InfoEnvio);
+    $Pedido = "insert into pedido(FechaEntrega, idEnvio, total, idUsuario)values((select DATE_ADD(NOW(),INTERVAL 2 DAY)), (SELECT MAX(idEnvio) AS id FROM informacion_envio), '$Total', '$IDusuario')";
+    $ResPedido = mysqli_query($conn, $Pedido);
+    $DetallePedido = "insert into detalle_pedido(idPedido, idProducto, PrecioUnitario, Cantidad, Importe, PrecioEnvio, SubTotal)values((select MAX(idPedido) AS id FROM pedido), '$IDproducto', '$Precio', '$Cantidad', '$Importe', '$Envio', '$Total');";
+    $ResDetalle = mysqli_query($conn, $DetallePedido); 
+
+    header('Location: Pago.php');
 
 }else{
     //CARGAR INFO RECOJO EN TIENDA

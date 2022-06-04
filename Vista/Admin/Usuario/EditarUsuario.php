@@ -46,8 +46,11 @@ require 'C:\xampp\htdocs\Vista\Admin\AdminDB.php';
                                 $UsuarioA = mysqli_fetch_array($ResultadoE);
                                 ?>
                                 <form action="UsuarioCRUD.php" method="POST">
-                                    <input type="hidden" name="Aid" value="<?= $UsuarioA['idUsuario']; ?>">
-
+                                    <input type="hidden" name="Eid" value="<?= $UsuarioA['idUsuario']; ?>">
+                                    <div class="mb-3">
+                                        <label>Id del Rol</label>
+                                        <input type="number" name="Erol" value="<?=$UsuarioA['idRol'];?>" class="form-control">
+                                    </div>
                                     <div class="mb-3">
                                         <label>Nombre</label>
                                         <input type="text" name="Enombre" value="<?=$UsuarioA['nombre'];?>" class="form-control">

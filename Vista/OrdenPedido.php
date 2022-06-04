@@ -33,20 +33,8 @@ include('conexion.php');
                     <input type="hidden" name="Aid" value="<?= $UsuarioA[0]; ?>">
                     <input type="hidden" name="Pid" value="<?= $ProductoD[0]; ?>">
                     <div>
-                        <label for="fnom">Nombres:</label>
-                    <input type="text" id="fnom" name="Pnombre" value="<?=$UsuarioA[2];?>" required class="box">
-                    </div>
-                    <div>
-                        <label for="fape">Apellidos:</label>
-                        <input type="text" id="fape" name="Papellido" value="<?=$UsuarioA[3];?>" required class="box">
-                    </div>
-                    <div>
                         <label for="fpro">Producto: </label>
                         <input type="text" id="fpro" name="Ppro" value="<?=$ProductoD[1];?>" required class="box">
-                    </div>
-                    <div>
-                        <label for="fdes">Descripción:</label>
-                        <input type="text" id="fdes" name="Pdes" value="<?=$ProductoD[3];?>" required class="box">
                     </div>
                     <input type="hidden" name="Pprecio" value="<?= $ProductoD[2]; ?>">
                     <div>
@@ -76,21 +64,26 @@ include('conexion.php');
                         <input type="text" id="fcan" name="Pcan" value="<?=$CAN;?>" required class="box">
                     </div>
                     <div>
-                        <label for="fsub">SubTotal (Incluye IGV):</label>
-                        <input type="text" id="fsub" name="Psub" value="S/.<?=$SubT;?>0" required class="box">
+                        <label for="fsub">SubTotal:</label>
+                        <input type="text" id="fsub" name="Psub" value="S/.<?=$CalcularP;?>.00" required class="box">
+                    </div>
+                    <br><h3>Datos del Delivery</h3>
+                    <div>
+                        <label for="fenvio">Complete la siguiente información, disponible en Lima Metropolitana.</label><br>
                     </div>
                     <div>
-                        <label for="fenvio">NOTA: El delivery solo está disponible en toda Lima Metropolitana, con un cargo adicional de S/5.00</label>
+                        <br><label for="direccionE">Direccion</label>
+                        <input type="text" id="direccionE" name="Pdir" required class="box">
                     </div>
-                    <h3>Formas de entrega<h3>
                     <div>
-                        <input type="text" /><img src="/Vista/img/delivery.png"/>
+                        <label for="codigoP">Codigo Postal</label>
+                        <input type="number" id="codigoP" name="Pcod" required class="box">
                     </div>
-                    <input type="submit" name="OrdenNext" value="Delivery" class="btn">
                     <div>
-                        <input type="text" /><img src="/Vista/img/tienda.png"/></a>
+                        <label for="referenciaE">Referencia</label>
+                        <input type="text" id="referenciaE" name="Pref" required class="box">
                     </div>
-                    <input type="submit" name="Tienda" value="Recoger Tienda" class="btn">
+                    <input type="submit" name="OrdenNext" value="PEDIR DELIVERY" class="btn"><br>
                 </form>
             </div>
         <?php
