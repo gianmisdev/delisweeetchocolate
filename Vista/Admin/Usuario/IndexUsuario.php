@@ -29,24 +29,24 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Usuario Registrados
+                        <h4 style="text-align:center">USUARIOS REGISTRADOS
                             <a href="CrearUsuario.php" class="btn btn-primary float-end">Agregar Usuario</a>
                         </h4>
                     </div>
                     <div class="card-body">
 
-                        <table class="table table-bordered table-striped">
+                        <table class="table table-bordered border-primary" style='font-size:150%'>
                             <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Rol</th>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>Contraseña</th>
-                                    <th>DNI</th>
-                                    <th>Correo</th>
-                                    <th>Fecha registrado</th>
-                                    <th>Accion</th>
+                                <tr class="table-info">
+                                    <th style="text-align:center">Id</th>
+                                    <th style="text-align:center">Rol</th>
+                                    <th style="text-align:center">Nombre</th>
+                                    <th style="text-align:center">Apellido</th>
+                                    <th style="text-align:center">Contraseña</th>
+                                    <th style="text-align:center">DNI</th>
+                                    <th style="text-align:center">Correo</th>
+                                    <th style="text-align:center">Fecha registrado</th>
+                                    <th style="text-align:center">Accion</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -60,15 +60,15 @@
                                         {
                                             ?>
                                             <tr>
-                                                <td><?= $usuario['idUsuario']; ?></td>
-                                                <td><?= $usuario['nombreRol']; ?></td>
-                                                <td><?= $usuario['nombre']; ?></td>
-                                                <td><?= $usuario['apellido']; ?></td>
-                                                <td><?= $usuario['Contraseña']; ?></td>
-                                                <td><?= $usuario['dni']; ?></td>
-                                                <td><?= $usuario['correo']; ?></td>
-                                                <td><?= $usuario['FechaRegistro']; ?></td>
-                                                <td>
+                                                <td style="text-align:center"><?= $usuario['idUsuario']; ?></td>
+                                                <td style="text-align:center"><?= $usuario['nombreRol']; ?></td>
+                                                <td style="text-align:center"><?= $usuario['nombre']; ?></td>
+                                                <td style="text-align:center"><?= $usuario['apellido']; ?></td>
+                                                <td style="text-align:center"><?= $usuario['Contraseña']; ?></td>
+                                                <td style="text-align:center"><?= $usuario['dni']; ?></td>
+                                                <td style="text-align:center"><?= $usuario['correo']; ?></td>
+                                                <td style="text-align:center"><?= $usuario['FechaRegistro']; ?></td>
+                                                <td style="text-align:center">
                                                     <a href="EditarUsuario.php?idUsuario=<?= $usuario['idUsuario']; ?>" class="btn btn-success btn-sm">Editar</a>
                                                     <form action="UsuarioCRUD.php" method="POST" class="d-inline">
                                                         <button type="submit" name="EliminarUsuario" value="<?=$usuario['idUsuario'];?>" class="btn btn-danger btn-sm">Eliminar</button>

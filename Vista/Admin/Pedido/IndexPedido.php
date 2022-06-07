@@ -29,27 +29,27 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Pedidos Generados</h4>
+                        <h4 style="text-align:center">PEDIDOS GENERADOS</h4>
                     </div>
                     <div class="card-body">
 
-                        <table class="table table-bordered table-striped">
+                        <table class="table table-bordered border-primary" style='font-size:150%'>
                             <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Apellido</th>
-                                    <th>DNI</th>
-                                    <th>Producto</th>
-                                    <th>Precio Unitario</th>
-                                    <th>Dirección de Envío</th>
-                                    <th>Código Postal</th>
-                                    <th>Referencia</th>
-                                    <th>Fecha Creada</th>
-                                    <th>Fecha de Entrega</th>
-                                    <th>Estado de Pago</th>
-                                    <th>Cantidad</th>
-                                    <th>Total</th>
-                                    <th>Accion</th>
+                                <tr class="table-info">
+                                    <th style="text-align:center">Nombre</th>
+                                    <th style="text-align:center">Apellido</th>
+                                    <th style="text-align:center">DNI</th>
+                                    <th style="text-align:center">Producto</th>
+                                    <th style="text-align:center">Precio Unitario</th>
+                                    <th style="text-align:center">Dirección de Envío</th>
+                                    <th style="text-align:center">Código Postal</th>
+                                    <th style="text-align:center">Referencia</th>
+                                    <th style="text-align:center">Fecha Creada</th>
+                                    <th style="text-align:center">Fecha de Entrega</th>
+                                    <th style="text-align:center">Estado de Pago</th>
+                                    <th style="text-align:center">Cantidad</th>
+                                    <th style="text-align:center">Total</th>
+                                    <th style="text-align:center">Accion</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -63,20 +63,20 @@
                                         {
                                             ?>
                                             <tr>
-                                                <td><?= $pedido['nombre']; ?></td>
-                                                <td><?= $pedido['apellido']; ?></td>
-                                                <td><?= $pedido['dni']; ?></td>
-                                                <td><?= $pedido['NombreProducto']; ?></td>
-                                                <td><?= $pedido['PrecioUnitario']; ?></td>
-                                                <td><?= $pedido['DireccionEnvio']; ?></td>
-                                                <td><?= $pedido['CodigoPostal']; ?></td>
-                                                <td><?= $pedido['Referencia']; ?></td>
-                                                <td><?= $pedido['FechaCreacion']; ?></td>
-                                                <td><?= $pedido['FechaEntrega']; ?></td>
-                                                <td><?= $pedido['Estado']; ?></td>
-                                                <td><?= $pedido['Cantidad']; ?></td>
-                                                <td><?= $pedido['Subtotal']; ?></td>
-                                                <td>
+                                                <td style="text-align:center"><?= $pedido['nombre']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['apellido']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['dni']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['NombreProducto']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['PrecioUnitario']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['DireccionEnvio']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['CodigoPostal']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['Referencia']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['FechaCreacion']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['FechaEntrega']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['Estado']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['Cantidad']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['Subtotal']; ?></td>
+                                                <td style="text-align:center">
                                                     <a href="EditarPedido.php?idPedido=<?= $pedido['idPedido']; ?>" class="btn btn-success btn-sm">Editar</a>
                                                     <form action="PedidoCRUD.php" method="POST" class="d-inline">
                                                         <button type="submit" name="EliminarPedido" value="<?=$pedido['idPedido'];?>" class="btn btn-danger btn-sm">Eliminar</button>

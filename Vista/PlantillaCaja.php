@@ -11,50 +11,75 @@
     <link rel="stylesheet" href="estilos/estilos.css">
 </head>
 
-<body>
+<body class="body-content">
 
-    <?php include('header.php') ?>
+    <?php include('../Vista/includes/header.php') ?>
 
     <div class="container">
 
-        <h3>Elige un diseño para tu caja</h3>
-        <div class="wrapper">
-            <div class="image" id="plantilla1">
-                <img src="/Vista/img/brownies.jpg" alt="">
-            </div>
-            <div class="image" id="plantilla2">
-                <img src="/Vista/img/brownie_genérico.jpg" alt="">
-            </div>
-            <div class="image" id="seleccionar">
-                <p class="text">No haz elegido una plantilla</p>
-            </div>
-        </div>
-        <select id="name" style="width: 90%;">
-            <option value="seleccionar">Selecciona tu diseño</option>
-            <option value="plantilla1">Plantilla 1</option>
-            <option value="plantilla2">Plantilla 2</option>
-        </select>
+        <form action="/Vista/PlantillaCaja.php" method="post">
+            <h3>Elige un diseño para tu caja</h3>
+            <div class="wrapper">
+                <!-- <div class="image" id="seleccionar">
+                    <p class="text">No haz elegido una plantilla</p>
+                </div> -->
+                <div class="image" id="plantilla1">
+                    <img src="img/plantilla-cuadrada.png" alt="">
+                </div>
+                <div class="image" id="plantilla2">
+                    <img src="img/Plantilla_flores.jpg" alt="">
+                </div>
+                <div class="image" id="plantilla3">
+                    <img src="img/san-valentin.jpg" alt="">
+                </div>
+                <div class="image" id="plantilla4">
+                    <img src="img/plantilla_navidad.jpg">
+                </div>
 
-        <input type="button" name="Regresar" value="Atras" class="btn" onclick="history.go(-1);">
-        <input type="submit" name="registrar" value="Siguiente" class="btn">
+                <div class="frase" id="contenido"></div>
+            </div>
+            <select id="name" style="width: 90%;">
+                <!-- <option value="seleccionar">Selecciona tu diseño</option> -->
+                <option value="plantilla1">Predeterminado</option>
+                <option value="plantilla2">Marco de Rosas</option>
+                <option value="plantilla3">San Valentin</option>
+                <option value="plantilla4">Navidad</option>
+            </select>
 
+            <div class="mensaje">
+                <label for="fnom">Escribe un mensaje</label>
+                <textarea id="entrada" name="frase" onkeyup="escribir2()" class="box" placeholder="Ejemplo: Feliz cumpleaños!"></textarea>
+            </div>
+
+            <input type="button" name="Regresar" value="Atras" class="btn">
+            <input type="submit" name="registrar" value="Siguiente" class="btn">
+        </form>
     </div>
 
 
-    <?php include('footer.php') ?>
+    <?php include('../Vista/includes/footer.php') ?>
 
     <script src="js/script.js"></script>
 
     <!-- elegir opciones de plantilla -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $("#name").on('change', function(){
+        $(document).ready(function() {
+            $("#name").on('change', function() {
                 $(".image").hide();
                 $("#" + $(this).val()).fadeIn(700);
             }).change();
         })
     </script>
+
+    <!-- Escribir frase -->
+    <script>
+        function escribir2() {
+            valor = document.getElementById('entrada').value;
+            document.getElementById('contenido').innerHTML = ' ' + valor;
+        }
+    </script>
+
 </body>
 
 </html>

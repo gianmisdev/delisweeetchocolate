@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Yeseva+One&display=swap');
+
 :root {
     --light-yellow: #FFD080;
     --light-orange: #E38956;
@@ -27,11 +29,20 @@ html {
     overflow-x: hidden;
 }
 
+.body-content{
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/fondo.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 section {
     padding: 3rem 2rem;
 }
 
 .titulo {
+    font-family: sans-serif;
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 2rem;
@@ -39,10 +50,21 @@ section {
     font-size: 4rem;
 }
 
+h3{
+    font-family: 'Yeseva One', cursive;
+    font-size: 2.7rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    color:var(--black);
+    text-align: center;
+}
+
 /* Botones */
 .btn,
 .option-btn,
 .delete-btn,
+.btncolor,
 .white-btn {
     display: inline-block;
     margin-top: 1rem;
@@ -55,23 +77,54 @@ section {
 }
 
 .btncolor{
-    background-color: #91E6CD !important;
+    background-color: #91E6CD;
 }
 
 .delete-btn{
     background-color: var(--red);
 }
 
-.white-btn:hover {
+.white-btn:hover{
     background-color: var(--white);
     color: var(--black);
 }
 .btn:hover,
+.btncolor:hover,
 .delete-btn:hover,
 .option-btn:hover{
     background-color: var(--black);
 }
 
+
+/* Form Pago*/
+.form-Pago {
+    min-height: 100vh;
+    background-color: var(--light-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form-Pago form {
+    padding: 2rem;
+    width: 50rem;
+    border-radius: .5rem;
+    border: var(--border);
+    background-color: var(--white);
+    text-align: center;
+}
+
+.form-Pago form img {
+    width: 80%;
+}
+
+.form-Pago form h3 {
+    font-size: 2.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color:rgb(101, 198, 251);
+}
 
 /* Form containers - Registro | Inicio de sesion */
 .form-container {
@@ -157,7 +210,7 @@ section {
 }
 
 .header .header-2 .flex {
-    padding: 2rem;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -201,7 +254,7 @@ section {
 }
 
 .header .header-2 .flex .icons>* {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
     color: var(--black);
     cursor: pointer;
     margin-left: 1.5rem;
@@ -329,11 +382,9 @@ section {
     background-color: var(--light-bg);
 }
 
-.promociones h3 {
-    font-size: 4rem;
-    text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 5rem;
+.promociones h1 {
+    padding-top: 1rem;
+    padding-bottom: 4rem;
 }
 
 .promociones .content {
@@ -341,7 +392,7 @@ section {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 3rem;
+    gap: 2rem;
     text-align: center;
 }
 
@@ -405,56 +456,86 @@ section {
 
 /* Creditos */
 .credit {
+    background-color: var(--light-bg);
     text-align: center;
     font-size: 1.7rem;
     color: var(--light-color);
     border-top: var(--border);
     margin-top: 0rem;
-    margin-bottom: 2.5rem;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 /*Personalización*/
 
 .form-personalizar {
     border: 1px solid rgb(8, 8, 8);
+    border-radius: .5rem;
     background-color: var(--light-pink);
-    width: 500px;
+    padding: 7rem;
+    max-width: 60rem;
+    margin: 5rem auto;
+    text-align: center;
+    display: flex;
+    /* width: 500px;
     height: 800px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
   
 }
 
 .img-brownie {
     text-align: center;
+    position: relative;
 
 }
 
 .basebrownie {
-    width: 60%;
-    padding-top: 20%;
+    position: relative;
+    width: 100%;
+    /* width: 60%;
+    padding-top: 20%; */
 }
 
 .first-capa{
     position: absolute;
-    width: 60%;
-    top: 42%;
+    width: 100%;
+    top: 50%;
+    /* width: 60%;
+    top: 42%; */
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .second-capa{
     position: absolute;
-    width: 63%;
-    top: 42%;
+    /* width: 63%;
+    top: 42%; */
+    width: 100%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.box-container {   
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+.box-container > div{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;   
+}
+.box-container .labelchk{
+    padding-left: 1rem;
+}
 
-.labelchk{
+/* .labelchk{
  
   font-size: 18px;
   padding-left: 5px;
@@ -477,10 +558,10 @@ section {
     transform: translate(-50%, -50%);
     margin-top: 40px;
     font-size: 3rem !important;
-}
+} */
+
 
 /* Plantilla de la caja */
-
 .container {
     background-color: #f7ecd9;
     border-radius: .5rem;
@@ -511,6 +592,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .wrapper .image img {
@@ -518,6 +600,24 @@ section {
     width: 100%;
     object-fit: fill;
 }
+    /* frase encima de imagen  */
+.wrapper .frase {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    padding-top: 7rem;
+    padding-left: 7.4rem;
+    padding-right: 7.4rem;
+    padding-bottom: 7rem;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    z-index: 2;
+}
+    /* fin  */
 
 .wrapper .text {
     font-size: 20px;
@@ -541,6 +641,27 @@ select {
     background-position: 95% 55%;
     background-size: 22px;
 }
+
+.container .box {
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 1.2rem 1.4rem;
+    margin: 1rem 0;
+    border: var(--border);
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+}
+
+.container .mensaje {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+
 
 /* media queries  */
 

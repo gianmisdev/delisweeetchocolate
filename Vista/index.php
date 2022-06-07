@@ -61,7 +61,7 @@ if(isset($_SESSION['dataU'])){
         <div class="hero">
             <h3>Lorem Ipsum</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quod? Reiciendis ut porro iste totam.</p>
-            <a href="/Vista/Personaliza.html" class="white-btn">Personalizar</a>           
+            <a href="/Vista/Personalizado.php" class="white-btn">Personalizar</a>           
         </div>   
     </section>
     

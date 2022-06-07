@@ -28,21 +28,21 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Productos Almacenados
+                        <h4 style="text-align:center">PRODUCTOS ALMACENADOS
                             <a href="CrearProducto.php" class="btn btn-primary float-end">Agregar Producto</a>
                         </h4>
                     </div>
                     <div class="card-body">
 
-                        <table class="table table-bordered table-striped">
+                        <table class="table table-bordered border-primary" style='font-size:150%'>
                             <thead>
-                                <tr>
-                                    <th>Id</th>
-                                    <th>Producto</th>
-                                    <th>Precio</th>
-                                    <th>Descripcion</th>
-                                    <th>Imagen</th>
-                                    <th>Accion</th>
+                                <tr class="table-info">
+                                    <th style="text-align:center">Id</th>
+                                    <th style="text-align:center">Producto</th>
+                                    <th style="text-align:center">Precio</th>
+                                    <th style="text-align:center">Descripcion</th>
+                                    <th style="text-align:center">Imagen</th>
+                                    <th style="text-align:center">Accion</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -56,12 +56,12 @@
                                         {
                                             ?>
                                             <tr>
-                                                <td><?= $producto['idProducto']; ?></td>
-                                                <td><?= $producto['NombreProducto']; ?></td>
-                                                <td><?= $producto['PrecioUnitario']; ?></td>
-                                                <td><?= $producto['Descripcion']; ?></td>
-                                                <td><?= $producto['Image']; ?></td>
-                                                <td>
+                                                <td style="text-align:center"><?= $producto['idProducto']; ?></td>
+                                                <td style="text-align:center"><?= $producto['NombreProducto']; ?></td>
+                                                <td style="text-align:center"><?= $producto['PrecioUnitario']; ?></td>
+                                                <td style="text-align:center"><?= $producto['Descripcion']; ?></td>
+                                                <td style="text-align:center"><?= $producto['Image']; ?></td>
+                                                <td style="text-align:center">
                                                     <a href="EditarProducto.php?idProducto=<?= $producto['idProducto']; ?>" class="btn btn-success btn-sm">Editar</a>
                                                     <form action="ProductoCRUD.php" method="POST" class="d-inline">
                                                         <button type="submit" name="EliminarProducto" value="<?=$producto['idProducto'];?>" class="btn btn-danger btn-sm">Eliminar</button>

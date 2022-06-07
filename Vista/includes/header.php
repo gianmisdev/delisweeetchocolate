@@ -1,18 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>PHP CRUD MYSQL</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- BOOTSTRAP 4 -->
-    <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
-    <!-- FONT AWESOEM -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  </head>
-  <body>
+<!-- Header -->
+<header class="header">
+    <div class="header-1">
+        <div class="flex">
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-whatsapp"></a>
+            </div>
+            <!-- <p> Nuevo <a href="/Vista/login.php">Login</a> | <a href="/Vista/registrarse.html">Registro</a> </p> -->
+        </div>
+    </div>
 
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="index.php">Prueba</a>
-      </div>
-    </nav>
+    <div class="header-2">
+        <div class="flex">
+            <div class="logo">
+                <a href="/Vista/index.php"><img src="/Vista/img/logo.png"></a>
+            </div>
+            <!--BURGER NAVBAR INICIO-->
+            <nav class="navbar">
+                <a href="#">Catalogo</a>
+                <a href="#">Promociones</a>
+                <a href="#">Contacto</a>
+                <a href="#">Nosotros</a>
+            </nav>
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div class="user">
+                    <a href="<?php echo $cs = (isset($sesion)) ? "/Vista/Perfil.php": "/Vista/login.php"; ?>"><img src="/Vista/img/usuario.png"></a>
+                </div>                   
+            </div>
+            <!--BURGER NAVBAR FIN-->
+        </div>
+    </div>
+</header>
