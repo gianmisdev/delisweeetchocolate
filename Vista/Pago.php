@@ -22,7 +22,7 @@ if(isset($_SESSION['dataU'])){
 <body class="body-content">
     <?php include('../Vista/includes/header.php') ?>
     <div class="form-Pago">
-        <form action="/Vista/ValidarPago.php" method="post">
+        <form action="/Vista/Tienda.php" method="post">
             <h3>Escanea uno de los siguientes códigos QR.</h3>
             <h1>Por temas de seguridad, recomendamos de no realizar el escaneo mediante terceros no registrados, solo el usuario actual puede proseguir con el pago.</h1><br>
             <br><img class="imagen" src="img/YapeQR.png" alt=""><br>

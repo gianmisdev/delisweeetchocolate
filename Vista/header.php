@@ -21,6 +21,7 @@
                 <a href="#">Promociones</a>
                 <a href="#">Contacto</a>
                 <a href="#">Nosotros</a>
+                <a href="https://maps.google.com/maps?q=-12.1683381%2C-76.9500709&z=17&hl=es" target="_blank">Visitar Tienda</a>
             </nav>
             <div class="icons">
                 <div id="menu-btn" class="fas fa-bars"></div>

@@ -116,10 +116,48 @@ h3{
 }
 
 .form-Pago form img {
-    width: 80%;
+    width: 50%;
 }
 
 .form-Pago form h3 {
+    font-size: 2.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color:rgb(101, 198, 251);
+}
+
+/* Form Tienda*/
+.form-Tienda {
+    min-height: 100vh;
+    background-color: var(--light-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form-Tienda form {
+    padding: 2rem;
+    width: 50rem;
+    border-radius: .5rem;
+    border: var(--border);
+    background-color: var(--white);
+    text-align: center;
+}
+
+.form-Tienda form img {
+    width: 40%;
+}
+
+.form-Tienda form div {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-Tienda form h3 {
     font-size: 2.3rem;
     margin-top: 1rem;
     margin-bottom: 1rem;

@@ -58,9 +58,7 @@
                     <input type="checkbox" name="checkGomitas" id="checkGomitas" onchange="javascript:mostrarcombo()" /><label class="labelchk" style="margin-right: 3.5rem;">Gomitas</label><br>
                 </div>
             </div>
-
-
-            <input type="submit" name="" value="Siguiente" class="btn" hred="/Vista/OrdenPedido.php">
+            <input type="submit" name="brownie" value="Siguiente" class="btn">
         </form>
     </div>
 
