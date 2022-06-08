@@ -99,7 +99,7 @@ h3{
 /* Form Pago*/
 .form-Pago {
     min-height: 100vh;
-    background-color: var(--light-pink);
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/fondo.jpg) no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,12 +111,17 @@ h3{
     width: 50rem;
     border-radius: .5rem;
     border: var(--border);
-    background-color: var(--white);
+    background-color: #faf2e4;
     text-align: center;
 }
 
 .form-Pago form img {
     width: 50%;
+}
+
+.form-Pago form h1 {
+    text-align: center;
+    color: #f3ad3b;
 }
 
 .form-Pago form h3 {
@@ -218,6 +223,123 @@ h3{
 }
 
 .form-container form p a {
+    color: var(--light-orange);
+}
+
+/* Form Orden Pedido */
+.form-Orden {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/fondo.jpg) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form-Orden form {
+    padding: 2rem;
+    width: 50rem;
+    border-radius: .5rem;
+    border: var(--border);
+    background-color: #f6eddf;
+    text-align: center;
+}
+
+.form-Orden form img {
+    width: 50%;
+    border: 5px solid rgb(255, 208, 123);
+}
+
+.form-Orden form h3 {
+    font-size: 2.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #7dccf6;
+}
+
+.form-Orden form .box {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.2rem 1.4rem;
+    margin: 1rem 0;
+    border: var(--border);
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+}
+
+.form-Orden form div {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.form-Orden form p {
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.form-Orden form p a {
+    color: var(--light-orange);
+}
+
+/* Form Pedido */
+.form-Pedido {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/fondo.jpg) no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form-Pedido form {
+    padding: 2rem;
+    width: 50rem;
+    border-radius: .5rem;
+    border: var(--border);
+    background-color: #f6eddf;
+    text-align: center;
+}
+
+.form-Pedido form img {
+    width: 30%;
+}
+
+.form-Pedido form h3 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #7dccf6;
+}
+
+.form-Pedido form .box {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.2rem 1.4rem;
+    margin: 1rem 0;
+    border: var(--border);
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+}
+
+.form-Pedido form div {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.form-Pedido form p {
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #d79120;
+}
+
+.form-Pedido form p a {
     color: var(--light-orange);
 }
 
@@ -337,6 +459,10 @@ h3{
 }
 
 /* Catalogo */
+.catalogo {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/inicio.png) no-repeat;
+}
+
 .catalogo .box-container{
     max-width: 1200px;
     padding-top: 2rem;
@@ -356,18 +482,25 @@ h3{
     text-align: center;
     border:var(--border);
     position: relative;
+    background-color: #f6eddf;
+}
+
+.catalogo section h1{
+    color: #ccc;
 }
 
 .catalogo .box-container .box .imagen{
-    height: 30rem;
+    width: 100%;
+    border: 5px solid rgb(237, 148, 103);
 }
 
-.catalogo .box-container .box .nombre,
+.catalogo .box-container .box .nombre{
+    text-align: center;
+    color: #53b4e8;
+}
 .catalogo .box-container .box .precio{
-    text-align: left;
-    padding:1rem;
-    font-size: 2rem;
-    color:var(--black);
+    text-align: center;
+    color: #52afe1;
 }
 
 .catalogo .box-container .box .option-btn{
@@ -376,44 +509,62 @@ h3{
 }
 
 /* Detalles del Producto */
-.detalle .box-container{
-    max-width: 1200px;
-    padding-top: 2rem;
-    margin:0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 30rem);
-    align-items: flex-start;
-    gap:2rem;
-    justify-content: center;
-}
-
-.detalle .box-container .box{
-    border-radius: .5rem;
-    background-color: var(--white);
-    box-shadow: var(--box-shadow);
-    padding:2rem;
-    text-align: center;
-    border:var(--border);
-    position: relative;
-}
-
-.detalle .box-container .box .imagen{
-    height: 30rem;
-}
-
-.detalle .box-container .box .nombre,
-.detalle .box-container .box .descripcion,
-.detalle .box-container .box .texto,
-.detalle .box-container .box .precio{
-    text-align: left;
-    padding:1rem;
-    font-size: 2rem;
-    color:var(--black);
-}
-
-.detalle .box-container .box .option-btn{
+.form-Detalle {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/fondo.jpg) no-repeat;
     display: flex;
+    align-items: center;
     justify-content: center;
+    padding: 2rem;
+}
+
+.form-Detalle form {
+    padding: 2rem;
+    width: 50rem;
+    border-radius: .5rem;
+    border: var(--border);
+    background-color: #f6eddf;
+    text-align: center;
+}
+
+.form-Detalle form img {
+    border: 5px solid rgb(255, 208, 123);
+    width: 50%;
+}
+
+.form-Detalle form h3 {
+    font-size: 2.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #7dccf6;
+}
+
+.form-Detalle form .box {
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1.2rem 1.4rem;
+    margin: 1rem 0;
+    border: var(--border);
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+}
+
+.form-Detalle form div {
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: left;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-Detalle form p {
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.form-Detalle form p a {
+    color: var(--light-orange);
 }
 /* Seccion promociones */
 .promociones {

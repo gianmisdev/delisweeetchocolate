@@ -1,7 +1,6 @@
 <?php
 include('conexion.php');
 
-//
 if (isset($_POST['registrar'])) {
     $nombre = $_POST['fnom'];
     $apellido = $_POST['fape'];

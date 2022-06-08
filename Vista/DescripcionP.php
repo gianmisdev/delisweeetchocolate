@@ -19,22 +19,30 @@ $_SESSION['dataP'] = $data;
     <!--ESTILOS-->
     <link rel="stylesheet" href="estilos/estilos.css">
 </head>
-<body>
-    <section class="detalle">
-        <h1 class="titulo">Detalles</h1>
-        <div class="form-container">
-            <form action="OrdenPedido.php" method="POST">
-                <img class="imagen" src="<?php echo $data[4]?>" alt="">
-                <div class="nombre"><h1><?php echo $data[1]?></h1></div>
-                <div class="descripcion">Descripcion: </div>
-                <div class="texto"><?php echo $data[3]?></div>
-                <input type="hidden" name="PrecioC" value="<?= $data[2]; ?>">
-                <div class="precio">Precio: S/.<?php echo $data[2]?>.00</div>
-                <h1>Elija su cantidad</h1>
-                <input type="number" id="fcan" name="Scantidad" max="10" min="1" required class="box">
-                <input type="submit" name="CalOrden" value="Siguiente" class="btn">
-            </div>
+<body class="body-content">
+    <?php include('../Vista/includes/header.php') ?>
+    <div class="form-Detalle">
+    <form action="OrdenPedido.php" method="post">
+        <h3>Detalles del Producto</h3>
+        <br><img class="imagen" src="<?php echo $data[4]?>" alt=""><br>
+        <div>
+            <br><label for="P">Producto:</label>
+            <input type="text" id="P" name="P" value="<?php echo $data[1]?>" disabled="disabled" required class="box">
         </div>
-    </section>
+        <div>
+            <label for="P">Descripción:</label>
+            <input type="text" id="R" name="R" value="<?php echo $data[3]?>" disabled="disabled" required class="box">
+        </div>
+        <div>
+            <label for="P">Precio Unitario:</label>
+            <input type="hidden" name="PrecioC" value="<?= $data[2]; ?>">
+            <input type="text" id="S" name="S" value="<?php echo "S/$data[2].00"?>" disabled="disabled" required class="box">
+        </div>
+        <h1>Elija su cantidad</h1>
+        <input type="number" id="fcan" name="Scantidad" max="10" min="1" required class="box">
+        <input type="submit" name="CalOrden" value="Siguiente" class="btn">
+    </form>
+    </div>
+    <?php include('../Vista/includes/footer.php') ?>
 </body>
 </html>

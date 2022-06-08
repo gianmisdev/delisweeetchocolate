@@ -68,15 +68,15 @@ if(isset($_SESSION['dataU'])){
     
     <!-- Seccion Catalogo -->
     <section class="catalogo">
-        <h1 class="titulo">Catalogo</h1>
+        <h1 class="titulo" style="color: white;">Catálogo de Productos</h1>
         <div class="box-container">
             <?php
                 foreach($_SESSION['data'] as $fila) { ?>
                     <div class="box">
                         <img class="imagen" src="<?php echo $fila['Image']; ?>" alt="">
-                        <div class="nombre"><?php echo $fila['NombreProducto']; ?>
+                        <b><div class="nombre"><?php echo $fila['NombreProducto']; ?></b>
                         </div>
-                        <div class="precio">S/.<?php echo $fila['PrecioUnitario']; ?>.00</div>
+                        <b><div class="precio">S/.<?php echo $fila['PrecioUnitario']; ?>.00</div></b>
                         <a href="DescripcionP.php?idProducto=<?php echo $fila['idProducto']?>" class="option-btn" name="verP">Ver</a>
                     </div>
                 <?php

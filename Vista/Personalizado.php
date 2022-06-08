@@ -13,8 +13,6 @@
 
 <body class="body-content">
     <?php include('../Vista/includes/header.php') ?>
-
-
     <div class="form-personalizar">
 
         <form action="/Vista/PlantillaCaja.php" method="post">
