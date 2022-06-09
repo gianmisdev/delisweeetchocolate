@@ -69,7 +69,7 @@ include('conexion.php');
                         <input type="text" id="fsub" name="Psub" value="S/.<?=$CalcularP;?>.00" disabled="disabled" required class="box">
                     </div>
                     <div>
-                        <label for="fsub">Total (Inlcuye IGV + Cargo Delivery S5.00):</label>
+                        <label for="fsub">Total (Inlcuye IGV + Cargo Delivery S/5.00):</label>
                         <input type="text" id="ftot" name="tot" value="S/.<?=$Tot;?>" disabled="disabled" required class="box">
                     </div>
                     <br><h3>Datos del Delivery</h3>

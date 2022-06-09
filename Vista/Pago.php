@@ -18,7 +18,7 @@
             <h1>Por temas de seguridad, recomendamos de no realizar el escaneo mediante terceros no registrados, solo el usuario actual puede proseguir con el pago.</h1><br>
             <br><img class="imagen" src="img/YapeQR.png" alt=""><br>
             <br><img class="imagen" src="img/PlinQR.png" alt=""><br>
-            <input type="submit" name="Pedido" value="Siguiente" class="btn">
+            <input type="submit" name="Pedido" value="Confirmar" class="btn">
         </form>
     </div>
     <?php include('../Vista/includes/footer.php') ?>

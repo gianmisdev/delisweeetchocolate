@@ -13,12 +13,10 @@ if (isset($_POST['ActPass'])) {
 				  window.location='login.php'
 	  </script>";
 }else{
-	?>
-	  <?php
-	  include("RestablecerPass.php");
-	  echo "<script>
-				  alert('Error!');
-				  window.location='RestablecerPass.php'
-	  </script>";
+	include("RestablecerPass.php");
+	echo "<script>
+		alert('Error!');
+		window.location='RestablecerPass.php'
+	</script>";
 }
 ?>

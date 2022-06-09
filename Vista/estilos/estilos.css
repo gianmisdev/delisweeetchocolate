@@ -675,6 +675,10 @@ h3{
   
 }
 
+.form-personalizar form h3{
+    color: #d79120;
+}
+
 .img-brownie {
     text-align: center;
     position: relative;
@@ -759,6 +763,10 @@ h3{
     max-width: 50rem;
     margin: 5rem auto;
     text-align: center;
+}
+
+.container form h3{
+    color: #d79120;
 }
 
 .container .wrapper {
