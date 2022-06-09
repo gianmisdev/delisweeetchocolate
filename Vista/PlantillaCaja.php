@@ -145,6 +145,10 @@
                 <label for="fnom">Escribe un mensaje: (Sólo diseño con marco)</label>
                 <textarea id="entrada" name="frase" onkeyup="escribir2()" class="box" placeholder="Ejemplo: Feliz cumpleaños!" requireD></textarea>
             </div>
+            <h2>Precio del Diseño</h2>
+            <div>
+                <input type="text" id="Pdiseño" name="PreDiseño" value="S/5.00" disabled="disabled" class="box"></textarea>
+            </div>
 
             <input type="button" name="Regresar" value="Atras" class="btn">
             <input type="submit" name="registrar" value="Siguiente" class="btn">

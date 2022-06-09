@@ -679,6 +679,11 @@ h3{
     color: #d79120;
 }
 
+.form-personalizar form h2{
+    color: #20a0d7;
+    font-size: 2.25rem;
+}
+
 .img-brownie {
     text-align: center;
     position: relative;
@@ -728,6 +733,16 @@ h3{
     padding-left: 1rem;
 }
 
+.contbox{
+    width: 50px;
+    height: 50px;
+    left: 10px;
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+    border-radius: 10px;
+}
+
 /* .labelchk{
  
   font-size: 18px;
@@ -767,6 +782,11 @@ h3{
 
 .container form h3{
     color: #d79120;
+}
+
+.container form h2{
+    color: #6cb3e9;
+    font-size: 2.0rem;
 }
 
 .container .wrapper {

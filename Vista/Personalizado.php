@@ -61,14 +61,16 @@
                     <label class="labelchk" style="margin-right: 3.5rem;">Gomitas</label><br>
                 </div>
             </div>
-            <input type="submit" name="IngredienteBD" value="Siguiente" class="btn">
+            <h2>PRECIO PARCIAL (S/)</h2><br>
+            <input type="number" id="fcontador" name="PreBrownie" readonly class="contbox" value="10"><br>
+            <br><input type="submit" name="IngredienteBD" value="Siguiente" class="btn">
         </form>
     </div>
 
 
     <?php include('../Vista/includes/footer.php') ?>
 
-    <script src="js/script.js"></script>
+    <script src="/Vista/js/script.js"></script>
     
 </body>
 
