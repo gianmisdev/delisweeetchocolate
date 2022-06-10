@@ -30,10 +30,6 @@ $_SESSION['dataP'] = $data;
             <input type="text" id="P" name="P" value="<?php echo $data[1]?>" disabled="disabled" required class="box">
         </div>
         <div>
-            <label for="P">Descripción:</label>
-            <input type="text" id="R" name="R" value="<?php echo $data[3]?>" disabled="disabled" required class="box">
-        </div>
-        <div>
             <label for="P">Precio Unitario:</label>
             <input type="hidden" name="PrecioC" value="<?= $data[2]; ?>">
             <input type="text" id="S" name="S" value="<?php echo "S/$data[2].00"?>" disabled="disabled" required class="box">
