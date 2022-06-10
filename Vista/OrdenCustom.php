@@ -1,10 +1,6 @@
 <?php
+session_start();
 include('conexion.php');
-$ConBrownie="";
-$ResBrownie=mysqli_query($conn,$ConBrownie);
-$FilaBrownie=mysqli_fetch_row($resultado);
-$_SESSION['dataB'] = $FilaBrownie;
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,59 +16,83 @@ $_SESSION['dataB'] = $FilaBrownie;
 <body class="body-content">
     <?php include('../Vista/includes/header.php') ?>
     <?php
-    $Brownie = $_SESSION['dataB'];
-    if(is_array($Brownie))
+    $Usuario = $_SESSION['dataU'];
+    $Ingrediente = $_SESSION['dataI'];
+    $Caja = $_SESSION['dataC'];
+    if(is_array($Ingrediente) and is_array($Caja))
     {
         ?>
-            <div class="form-Brownie">
-                <form action="DetalleBrownie.php" method="post">
+            <div class="form-Orden">
+                <form action="DetallePersonalizado.php" method="post">
                     <h3>Orden del Brownie Personalizado</h3>
-                    <img class="imagen" src="<?=$Brownie[];?>" alt="">
-                    <input type="hidden" name="Bid" style="display:none;" value="<?= $Brownie[]; ?>">
+                    <input type="hidden" name="Uid" value="<?= $Usuario[0]; ?>">
+                    <input type="hidden" name="Iid" value="<?= $Ingrediente[0]; ?>">
+                    <input type="hidden" name="Cid" value="<?= $Caja[0]; ?>">
                     <div>
                         <label for="P">Producto: </label>
-                        <input type="text" id="P" name="Bpro" value="Brownie de chocolate" disabled="disabled" required class="box">
+                        <input type="text" id="P" name="PerNom" value="Brownie de chocolate" disabled="disabled" required class="box">
                     </div>
                     <div>
-                        <label for="I">Ingredientes:</label>
-                        <input type="text" id="I" name="Bing" value="<?=$Brownie[];?>" disabled="disabled" required class="box">
+                        <label for="P">Descripción:</label>
+                        <textarea id="R" name="R" disabled="disabled" class="box"><?php echo "Contiene ingredientes como $Ingrediente[1], y usa el diseño $Caja[1]"?></textarea>
                     </div>
                     <div>
-                        <label for="P">Plantilla:</label>
-                        <input type="text" id="Pla" name="Bpla" value="<?=$Brownie[];?>" disabled="disabled" required class="box">
-                    </div>
-                    <div>
-                        <label for="P">Precio:</label>
-                        <input type="hidden" name="Pimp" value="<?= $CalcularP; ?>">
-                        <input type="text" id="Pre" name="pre" value="S/15.00" disabled="disabled" required class="box">
+                        <label for="M">Mensaje de la Caja:</label>
+                        <input type="text" id="M" name="PerMen" value="<?php echo $Caja[2]; ?>" placeholder="¡El diseño elegido incluye mensaje!" disabled="disabled" required class="box">
                     </div>
                     <?php
-                    //CALCULAR
-                        $CalcularP=15;
-                        $IGV=$CalcularP*0.18;
+                    //Calcular Precios
+                    if(isset($_POST['CalOrdenPer'])){
+                        $Cantidad=$_POST['PerCantidad'];
+                        $CAN=intval($Cantidad);
+                        $Precio=$_POST['PerPrecio'];
+                        $PRE=intval($Precio);
+                        $Importe=($CAN*$PRE);
+                        $IGV=$Importe*0.18;
                         $Envio=5;
-                        $SubT=$CalcularP+$IGV;
-                        $Tot=$SubT+5;
+                        $Parcial=$Importe+$Envio;
+                        $SubTotal=$Importe+$IGV;
+                        $Total=$SubTotal+5;
+                    }
                     ?>
+                    <input type="hidden" name="PerUni" value="<?=$Precio;?>">
+                    <input type="hidden" name="PerCan" value="<?=$Cantidad;?>">
+                    <input type="hidden" name="PerImp" value="<?=$Importe;?>">
+                    <input type="hidden" name="PerIGV" value="<?=$IGV;?>">
+                    <input type="hidden" name="PerEnv" value="<?=$Envio;?>">
+                    <input type="hidden" name="PerTot" value="<?=$Total;?>">
+                    <input type="hidden" name="PerPar" value="<?=$Parcial;?>">
+                    <div>
+                        <label for="funi">Precio Unitario:</label>
+                        <input type="text" id="uni" name="Uni" value="S/.<?=$Precio;?>.00" disabled="disabled" required class="box">
+                    </div>
+                    <div>
+                        <label for="fcan">Cantidad:</label>
+                        <input type="text" id="fcan" name="Can" value="<?=$CAN;?>" disabled="disabled" required class="box">
+                    </div>
+                    <div>
+                        <label for="P">SubTotal:</label>
+                        <input type="text" id="Pre" name="PrecioP" value="S/.<?=$Importe;?>.00" disabled="disabled" required class="box">
+                    </div>
                     <div>
                         <label for="fsub">Total (Inlcuye IGV + Cargo Delivery S/5.00):</label>
-                        <input type="text" id="ftot" name="tot" value="S/.<?=$Tot;?>" disabled="disabled" required class="box">
+                        <input type="text" id="ftot" name="T" value="S/.<?=$Total;?>" disabled="disabled" required class="box">
                     </div>
                     <br><h3>Datos del Delivery</h3>
                     <b><p>Complete la siguiente información, disponible en Lima Metropolitana.</p></b>
                     <div>
                         <br><label for="direccionE">Direccion</label>
-                        <input type="text" id="direccionE" name="Pdir" required class="box">
+                        <input type="text" id="direccionE" name="PerDir" required class="box">
                     </div>
                     <div>
                         <label for="codigoP">Codigo Postal</label>
-                        <input type="number" id="codigoP" name="Pcod" required class="box">
+                        <input type="number" id="codigoP" name="PerCod" required class="box">
                     </div>
                     <div>
                         <label for="referenciaE">Referencia</label>
-                        <input type="text" id="referenciaE" name="Pref" required class="box">
+                        <input type="text" id="referenciaE" name="PerRef" required class="box">
                     </div>
-                    <input type="submit" name="OrdenBrownie" value="Siguiente" class="btn"><br>
+                    <input type="submit" name="OrdenBrowniePer" value="Siguiente" class="btn"><br>
                 </form>
             </div>
         <?php include('../Vista/includes/footer.php') ?>
