@@ -18,6 +18,7 @@
             <h1>Por temas de seguridad, recomendamos de no realizar el escaneo mediante terceros no registrados, solo el usuario actual puede proseguir con el pago.</h1><br>
             <br><img class="imagen" src="img/YapeQR.png" alt=""><br>
             <br><img class="imagen" src="img/PlinQR.png" alt=""><br>
+            <input type="hidden" value="<?php echo $_GET['DetalleProducto']?>" name="DetPro">
             <input type="submit" name="Pedido" value="Confirmar" class="btn">
         </form>
     </div>

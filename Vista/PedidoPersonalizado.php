@@ -8,21 +8,13 @@ $conn = mysqli_connect(
     'BD_MAIOT'
   ) or die(mysqli_erro($mysqli));
 
-  if($_POST['DetPro'] == 'DP'){
-    $ListarPedido ="select nombre,apellido,NombreProducto,Subtotal, FechaEntrega from pedido
-    inner join usuario on usuario.idUsuario=pedido.idUsuario
-    inner join informacion_envio on informacion_envio.idEnvio=pedido.idEnvio
-    inner join detalle_pedido on detalle_pedido.idPedido=pedido.idPedido
-    inner join producto on producto.idProducto=detalle_pedido.idProducto
-    where pedido.idPedido=(SELECT MAX(pedido.idPedido) FROM pedido);";
-  }else{
-    $ListarPedido ="select nombre,apellido,Estado,SubtotalPer, FechaEntrega from pedido
-    inner join usuario on usuario.idUsuario=pedido.idUsuario
-    inner join informacion_envio on informacion_envio.idEnvio=pedido.idEnvio
-    inner join brownie_personalizado on brownie_personalizado.idPedido=pedido.idPedido
-    where pedido.idPedido=(SELECT MAX(pedido.idPedido) FROM pedido);";
-  }
-  
+  $ListarPedido ="select pedido.idPedido, nombre,apellido,dni,NombreProducto, producto.PrecioUnitario,DireccionEnvio,
+  CodigoPostal, Referencia,FechaCreacion,FechaEntrega,Estado,Cantidad,Subtotal from pedido
+  inner join usuario on usuario.idUsuario=pedido.idUsuario
+  inner join informacion_envio on informacion_envio.idEnvio=pedido.idEnvio
+  inner join detalle_pedido on detalle_pedido.idPedido=pedido.idPedido
+  inner join producto on producto.idProducto=detalle_pedido.idProducto
+  where pedido.idPedido=(SELECT MAX(pedido.idPedido) FROM pedido);";
   $ResPedido=mysqli_query($conn,$ListarPedido);
   $FilaPedido=mysqli_fetch_row($ResPedido);
   $_SESSION['dataLP'] = $FilaPedido;
@@ -45,26 +37,25 @@ $conn = mysqli_connect(
     $Pedido = $_SESSION['dataLP'];
     if(is_array($Pedido))
     {
-        ($_POST['DetPro'] == 'DP')?$Pedido[2]:$Pedido[2]='Brownie Personalizado';
         ?>
         <div class="form-Pedido">
             <form action="/Vista/Inicio.php" method="post">
                 <h3>Pedido Completado</h3>
                 <div>
                     <label for="NA">Nombre y Apellidos:</label>
-                    <input type="text" id="NA" name="NA" value="<?php echo "$Pedido[0] $Pedido[1]"?>" disabled="disabled" required class="box">
+                    <input type="text" id="NA" name="NA" value="<?php echo "$Pedido[1] $Pedido[2]"?>" disabled="disabled" required class="box">
                 </div>
                 <div>
                     <label for="P">Producto:</label>
-                    <input type="text" id="P" name="P" value="<?php echo "$Pedido[2]"?>" disabled="disabled" required class="box">
+                    <input type="text" id="P" name="P" value="<?php echo "$Pedido[4]"?>" disabled="disabled" required class="box">
                 </div>
                 <div>
                     <label for="T">Pago Total:</label>
-                    <input type="text" id="T" name="T" value="<?php echo "S/$Pedido[3]"?>" disabled="disabled" required class="box">
+                    <input type="text" id="T" name="T" value="<?php echo "S/$Pedido[13]"?>" disabled="disabled" required class="box">
                 </div>
                 <div>
                     <label for="F">Fecha de entrega estimada:</label>
-                    <input type="text" id="F" name="F" value="<?php echo "$Pedido[4]"?>" disabled="disabled" required class="box">
+                    <input type="text" id="F" name="F" value="<?php echo "$Pedido[10]"?>" disabled="disabled" required class="box">
                 </div>
                 <h3>¡Gracias por elegirnos!</h3>
                 <div>

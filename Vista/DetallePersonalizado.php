@@ -31,6 +31,8 @@ if (isset($_POST['OrdenBrowniePer'])) {
     '$Precio', '$Cantidad', '$Importe', '$Envio', '$Parcial');";
     $ResDetalle = mysqli_query($conn, $DetallePersonalizado);
 
-    header('Location: Pago.php');
+    if($ResEnvio && $ResDetalle && $ResPedido){
+        header('Location: Pago.php?DetalleProducto=BP');
+    }
 }
 ?>

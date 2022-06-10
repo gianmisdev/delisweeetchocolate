@@ -20,12 +20,9 @@ if (isset($_POST['OrdenNext'])) {
     $DetallePedido = "insert into detalle_pedido(idPedido, idProducto, PrecioUnitario, Cantidad, Importe, PrecioEnvio, SubTotal)values((select MAX(idPedido) AS id FROM pedido), '$IDproducto', '$Precio', '$Cantidad', '$Importe', '$Envio', '$Total');";
     $ResDetalle = mysqli_query($conn, $DetallePedido);
 
-    header('Location: Pago.php');
-
-}else{
-    //CARGAR INFO RECOJO EN TIENDA
-    if (isset($_POST['Tienda'])) { 
-        header('Location: RecogerT.html');
+    if($ResEnvio && $ResDetalle && $ResPedido){
+        header('Location: Pago.php?DetalleProducto=DP');
     }
+
 }
 ?>
