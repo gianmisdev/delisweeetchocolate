@@ -3,9 +3,9 @@
     <div class="header-1">
         <div class="flex">
             <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-whatsapp"></a>
+                <a href="https://facebook.com/Delisweetchocolate" target="_blank" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/delisweetchocolate" target="_blank" class="fab fa-instagram"></a>
+                <a href="https://api.whatsapp.com/send?phone=51972591578&text=Hola%21%20Comunicate%20con%20nosotros%20para%20mas%20informaci%C3%B3n." target="_blank" class="fab fa-whatsapp"></a>
             </div>
             <p><a href="login.php">Login</a> | <a href="registrarse.html">Registrarse</a> </p>
         </div>
@@ -23,11 +23,6 @@
                 <a href="#">Nosotros</a>
                 <a href="https://maps.google.com/maps?q=-12.1683381%2C-76.9500709&z=17&hl=es" target="_blank">Visitar Tienda</a>
             </nav>
-            <div class="icons">
-                <div id="menu-btn" class="fas fa-bars"></div>
-                <a href="#" class="fas fa-search"></a>
-                <div id="user-btn" class="fas fa-user"></div>
-                <a href="#"> <i class="fas fa-shopping-cart"></i></a>
             </div>
             <!--BURGER NAVBAR FIN-->
         </div>

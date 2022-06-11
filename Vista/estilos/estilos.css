@@ -95,6 +95,30 @@ h3{
     background-color: var(--black);
 }
 
+/* whatsapp boton flotante */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+	color: #25d366;
+    background-color:#fff;
+}
+
+.my-float{
+	margin-top:16px;
+}
 
 /* Form Pago*/
 .form-Pago {
@@ -171,6 +195,7 @@ h3{
 
 /* Form containers - Registro | Inicio de sesion */
 .form-container {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/fondo.jpg) no-repeat;
     min-height: 100vh;
     background-color: var(--light-pink);
     display: flex;
@@ -877,8 +902,6 @@ select {
     text-align: left;
     font-weight: bold;
 }
-
-
 
 /* media queries  */
 

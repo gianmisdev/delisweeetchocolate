@@ -5,6 +5,14 @@ if(isset($_SESSION['dataU'])){
 }else{
     unset($_SESSION['dataU']);
 }
+//MOSTRAR CATALOGO
+include('conexion.php');
+  $listar="CALL pa_listar_producto()";
+  $res=mysqli_query($conn,$listar);
+  $data=mysqli_fetch_all($res,MYSQLI_ASSOC);
+  $_SESSION['data']= $data;
+  mysqli_free_result($res);
+  mysqli_close($conn);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,9 +33,9 @@ if(isset($_SESSION['dataU'])){
         <div class="header-1">
             <div class="flex">
                 <div class="share">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                    <a href="#" class="fab fa-whatsapp"></a>
+                    <a href="https://facebook.com/Delisweetchocolate" target="_blank" class="fab fa-facebook-f"></a>
+                    <a href="https://www.instagram.com/delisweetchocolate" target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://api.whatsapp.com/send?phone=51972591578&text=Hola%21%20Comunicate%20con%20nosotros%20para%20mas%20informaci%C3%B3n." target="_blank" class="fab fa-whatsapp"></a>
                 </div><?php
                 echo $cs = (isset($sesion)) ? "<p><a href='login.php'>Cerrar Sesion</a>": "";?>
             </div>
@@ -60,8 +68,10 @@ if(isset($_SESSION['dataU'])){
     <!-- Seccion Personalizar -->
     <section class="home">
         <div class="hero">
-            <h3>Lorem Ipsum</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quod? Reiciendis ut porro iste totam.</p>
+            <h3>Personaliza tu propio Brownie</h3>
+            <p>Crea tu propio brownie. ¡Con los ingredientes que más te gusten, y no olvides
+                escoger un plantilla con la dedicatoria que irá en la caja!
+            </p>
             <a href="/Vista/Personalizado.php" class="white-btn">Personalizar</a>           
         </div>   
     </section>
@@ -104,37 +114,13 @@ if(isset($_SESSION['dataU'])){
         </div>
     </section>
     
-    <!-- Footer -->
-    <section class="footer">
-        <div class="box-container">
-            <div class="box">
-                <div class="logo">
-                    <a href="#"><img src="img/logo.png"></a>
-                </div>
-                <p>
-                Misión
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                 tempor incididunt ut labore et dolore magna aliqua”.
-                </p>
-            </div>
-            <div class="box">
-                <p><a href="#">INICIO</a></p>
-                <p><a href="#">PRODUCTOS</a></p>
-                <p><a href="#">PROMOCIONES</a></p>
-                <p><a href="#">CONTACTO</a></p>
-            </div>
-            <div class="box">
-                <h2>Redes sociales</h2>
-                <a href="#"><i class="fab fa-facebook-f"></i> Facebook </a>
-                <a href="#"><i class="fab fa-instagram"></i> Instagram </a>
-                <a href="#"><i class="fab fa-whatsapp"></i> Whatsapp </a>
-            </div>
-        </div>
-    </section>
-        
-    <p class="credit"> &copy; <b>Delisweetchocolate</b> - 2022 Todos los Derechos Reservados</p>
+    <?php include('../Vista/includes/footer.php') ?>
     
-
     <script src="js/script.js"></script>
+    <!-- Boton flotante de whatsapp -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=51972591578&text=Hola%21%20Comunicate%20con%20nosotros%20para%20mas%20informaci%C3%B3n." class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
 </body>
 </html>

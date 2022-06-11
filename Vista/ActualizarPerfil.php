@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('conexion.php');
 
 //
@@ -13,8 +12,10 @@ if (isset($_POST['ActPer'])) {
     $query = "CALL pa_actualizar_Usuario('$IDusuario', '','$nombre', '$apellido', '$contraseña', '$dni', '$correo')";
       
     $result = mysqli_query($conn, $query);
-
-    header('Location: Perfil.php');
+    echo "<script>
+                alert('Datos Actualizados!');
+                window.location= 'Perfil.php'
+    </script>";
 
 }else{
   ?>
