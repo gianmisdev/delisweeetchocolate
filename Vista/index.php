@@ -95,25 +95,6 @@ include('conexion.php');
         </div>
     </section>
     
-    <!-- Secciones Promociones -->
-    <section class="promociones">
-        <h3>Promociones</h3>
-        <div class="content">
-            <div class="box">
-                <h2>Delivery</h2>
-                <a><img src="img/delivery.png" alt=""></a>
-            </div>
-            <div class="box">
-                <h2>Yape</h2>
-                <a><img src="img/yape.png" alt=""></a>
-            </div>
-            <div class="box">
-                <h2>Plin</h2>
-                <a><img src="img/plin.png" alt=""></a>
-            </div>
-        </div>
-    </section>
-    
     <?php include('../Vista/includes/footer.php') ?>
     
     <script src="js/script.js"></script>
