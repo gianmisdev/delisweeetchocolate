@@ -254,7 +254,7 @@ h3{
 /* Form Orden Pedido */
 .form-Orden {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/fondo.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/inicio.png) no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -312,7 +312,7 @@ h3{
 
 /* Form Pedido */
 .form-Pedido {
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/fondo.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/inicio.png) no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -536,7 +536,7 @@ h3{
 /* Detalles del Producto */
 .form-Detalle {
     min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/fondo.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/inicio.png) no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
