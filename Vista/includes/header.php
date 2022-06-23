@@ -6,8 +6,8 @@
                 <a href="https://facebook.com/Delisweetchocolate" target="_blank" class="fab fa-facebook-f"></a>
                 <a href="https://www.instagram.com/delisweetchocolate" target="_blank" class="fab fa-instagram"></a>
                 <a href="https://api.whatsapp.com/send?phone=51972591578&text=Hola%21%20Comunicate%20con%20nosotros%20para%20mas%20informaci%C3%B3n." target="_blank" class="fab fa-whatsapp"></a>
-            </div>
-            <!-- <p> Nuevo <a href="/Vista/login.php">Login</a> | <a href="/Vista/registrarse.html">Registro</a> </p> -->
+                </div><?php
+                echo $cs = (isset($sesion)) ? "<p><a href='login.php'>Cerrar Sesion</a>": "";?>
         </div>
     </div>
 
@@ -18,10 +18,16 @@
             </div>
             <!--BURGER NAVBAR INICIO-->
             <nav class="navbar">
-                <a href="\Vista\Index.php">Catalogo</a>
-                <a href="#">Promociones</a>
-                <a href="#">Contacto</a>
+                <a href="\Vista\Index.php">Catálogo</a>
                 <a href="#">Nosotros</a>
+                <?php
+                if(isset($_SESSION['dataU'])){
+                $UsuarioADM = $_SESSION['dataU'];
+                $AdminR = $UsuarioADM[1];
+                if($AdminR == 1){
+                   ?><a href="/Vista/Admin/IndexAdmin.php">Administración</a><?php
+                }
+            }?>
                 <a href="https://maps.google.com/maps?q=-12.1683381%2C-76.9500709&z=17&hl=es" target="_blank">Visitar Tienda</a>
             </nav>
             <div class="icons">

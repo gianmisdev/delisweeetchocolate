@@ -1,6 +1,11 @@
 <?php
 session_start();
 include('conexion.php');
+if(empty($_SESSION['dataU'])){
+    header("location:login.php");
+}elseif(isset($_SESSION['dataU'])){
+    $sesion=$_SESSION['dataU'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,6 +59,11 @@ include('conexion.php');
                         <input type="text" id="fcontraseña" name="Acontraseña" value="<?=$FilaU[4];?>" required class="box">
                     </div>
                     <input type="submit" name="ActPer" value="Actualizar Datos" class="btn">
+                    <?php
+                    if($FilaU[1] == 1){
+                        ?><br><a href="/Vista/Admin/IndexAdmin.php" class="option-btn">Administrar Pagina</a><?php
+                    }
+                    ?>
                 </form>
             </div>
             <?php

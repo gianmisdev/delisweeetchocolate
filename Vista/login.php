@@ -21,7 +21,7 @@ if(isset($_SESSION['dataU'])){
 
         <form action="InicioSesion.php" method="post">
             <img src="img/logo.png" alt=""></a>
-            <h3>Inicia sesión</h3>
+            <h3>Inicio de Sesión</h3>
 
             <div>
                 <label for="fcorreo">Correo</label>

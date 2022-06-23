@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(isset($_SESSION['dataU'])){
+    $sesion=$_SESSION['dataU'];
+}
 include('conexion.php');
 $ConIng="select * from ingredientes where idIngrediente=(SELECT MAX(idIngrediente) from ingredientes);";
 $ResIng=mysqli_query($conn,$ConIng);
@@ -9,8 +12,6 @@ $ConCaja="select * from caja where idCaja=(SELECT MAX(idCaja) from caja);";
 $ResCaja=mysqli_query($conn,$ConCaja);
 $CajaData=mysqli_fetch_row($ResCaja);
 $_SESSION['dataC'] = $CajaData;
-print_r($_SESSION['dataI']);
-print_r($_SESSION['dataC']);
 
 ?>
 <!DOCTYPE html>
@@ -21,7 +22,8 @@ print_r($_SESSION['dataC']);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles Personalizado</title>
-    <!--ESTILOS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Estilos -->
     <link rel="stylesheet" href="estilos/estilos.css">
 </head>
 <body class="body-content">

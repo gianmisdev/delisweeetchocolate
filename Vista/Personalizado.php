@@ -1,3 +1,11 @@
+<?php
+session_start();
+if(empty($_SESSION['dataU'])){
+    header("location:login.php");
+}elseif(isset($_SESSION['dataU'])){
+    $sesion=$_SESSION['dataU'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

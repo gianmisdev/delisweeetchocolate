@@ -13,9 +13,15 @@
         </div>
         <div class="box">
             <p><a href="/Vista/index.php">INICIO</a></p>
-            <p><a href="/Vista/index.php">PRODUCTOS</a></p>
-            <p><a href="#">PROMOCIONES</a></p>
-            <p><a href="#">CONTACTO</a></p>
+            <?php
+                if(isset($_SESSION['dataU'])){
+                $UsuarioADM = $_SESSION['dataU'];
+                $AdminR = $UsuarioADM[1];
+                if($AdminR == 1){
+                   ?><p><a href="/Vista/Admin/IndexAdmin.php">ADMINISTRACIÓN</a></p><?php
+                }
+            }?>
+            <p><a href="https://maps.google.com/maps?q=-12.1683381%2C-76.9500709&z=17&hl=es" target="_blank">TIENDA LOCAL</a></p>
         </div>
         <div class="box">
             <h2>Redes sociales</h2>

@@ -1,6 +1,12 @@
 <?php
 session_start();
 include('conexion.php');
+if(empty($_SESSION['dataU'])){
+    header("location:login.php");
+}elseif(isset($_SESSION['dataU'])){
+    $sesion=$_SESSION['dataU'];
+}
+
 $idProducto = $_GET['idProducto'];
 $consulta="select * from producto where idProducto=$idProducto";
 $resultado=mysqli_query($conn,$consulta);

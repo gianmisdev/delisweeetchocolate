@@ -2,8 +2,6 @@
 session_start();
 if(isset($_SESSION['dataU'])){
     $sesion=$_SESSION['dataU'];
-}else{
-    unset($_SESSION['dataU']);
 }
 include('conexion.php');
 ?>
@@ -75,12 +73,12 @@ include('conexion.php');
                     <br><h3>Datos del Delivery</h3>
                     <b><p>Complete la siguiente información, disponible en Lima Metropolitana.</p></b>
                     <div>
-                        <br><label for="direccionE">Direccion</label>
+                        <br><label for="direccionE">Dirección</label>
                         <input type="text" id="direccionE" name="Pdir" required class="box">
                     </div>
                     <div>
-                        <label for="codigoP">Codigo Postal</label>
-                        <input type="number" id="codigoP" name="Pcod" required class="box">
+                        <label for="codigoP">Código Postal</label>
+                        <input type="number" id="codigoP" name="Pcod" max="15999" min="15000" required class="box">
                     </div>
                     <div>
                         <label for="referenciaE">Referencia</label>

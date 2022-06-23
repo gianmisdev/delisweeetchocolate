@@ -13,11 +13,7 @@ $_SESSION['dataU'] = $filas;
 mysqli_close($conn);
 
 if($filas){
-  if($_SESSION['dataU'][1] != 0){
-    header("location:/Vista/Admin/IndexAdmin.php");
-  }else{
-    header("location:index.php");
-  }
+  header("location:index.php");
 }else{
     ?>
     <?php

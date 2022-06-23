@@ -28,7 +28,7 @@ if (isset($_POST['OrdenBrowniePer'])) {
     //INSERT TABLA BROWNIE_PERSONALIZADO
     $DetallePersonalizado = "insert into brownie_personalizado(idIngrediente, idCaja, idPedido, PrecioPersonalizado, CantidadPersonalizado, ImportePersonalizado, Envio, SubTotalPer)
     values ((SELECT MAX(idIngrediente) as id FROM ingredientes), (SELECT MAX(idCaja) as id FROM caja),(SELECT MAX(idPedido) as id FROM Pedido),
-    '$Precio', '$Cantidad', '$Importe', '$Envio', '$Parcial');";
+    '$Precio', '$Cantidad', '$Importe', '$Envio', '$Total');";
     $ResDetalle = mysqli_query($conn, $DetallePersonalizado);
 
     if($ResEnvio && $ResDetalle && $ResPedido){

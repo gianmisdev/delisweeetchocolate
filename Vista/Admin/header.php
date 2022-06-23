@@ -5,7 +5,6 @@
                 <div class="logo">
                     <a href="/Vista/Admin/IndexAdmin.php"><img src="\Vista\img\logo.png"></a>
                 </div>
-                <p>Administración de MAIOT</p>
                 <!--BURGER NAVBAR INICIO-->
                 <nav class="navbar">
                     <a href="/Vista/Admin/IndexAdmin.php">Inicio</a>
@@ -13,6 +12,7 @@
                     <a href="/Vista/Admin/Producto/IndexProducto.php">Producto</a>
                     <a href="/Vista/Admin/Pedido/IndexPedido.php">Pedido</a>
                     <a href="/Vista/Admin/Personalizado/IndexPersonalizado.php">Brownie Personalizado</a>
+                    <a href="/Vista/index.php">Volver Tienda</a>
                 </nav>
                 <div class="icons">
                     <div id="menu-btn" class="fas fa-bars"></div>                   

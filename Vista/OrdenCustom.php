@@ -1,5 +1,8 @@
 <?php
 session_start();
+if(isset($_SESSION['dataU'])){
+    $sesion=$_SESSION['dataU'];
+}
 include('conexion.php');
 ?>
 <!DOCTYPE html>
@@ -9,7 +12,8 @@ include('conexion.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orden de Pedido</title>   
-    <!--ESTILOS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Estilos -->
     <link rel="stylesheet" href="estilos/estilos.css">
 </head>
 <body>
@@ -81,12 +85,12 @@ include('conexion.php');
                     <br><h3>Datos del Delivery</h3>
                     <b><p>Complete la siguiente información, disponible en Lima Metropolitana.</p></b>
                     <div>
-                        <br><label for="direccionE">Direccion</label>
+                        <br><label for="direccionE">Dirección</label>
                         <input type="text" id="direccionE" name="PerDir" required class="box">
                     </div>
                     <div>
-                        <label for="codigoP">Codigo Postal</label>
-                        <input type="number" id="codigoP" name="PerCod" required class="box">
+                        <label for="codigoP">Código Postal</label>
+                        <input type="number" id="codigoP" name="PerCod" max="15999" min="15000" required class="box">
                     </div>
                     <div>
                         <label for="referenciaE">Referencia</label>

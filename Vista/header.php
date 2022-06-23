@@ -17,10 +17,16 @@
             </div>
             <!--BURGER NAVBAR INICIO-->
             <nav class="navbar">
-                <a href="/Vista/index.php">Catalogo</a>
-                <a href="#">Promociones</a>
-                <a href="#">Contacto</a>
+                <a href="\Vista\Index.php">Catálogo</a>
                 <a href="#">Nosotros</a>
+                <?php
+                if(isset($_SESSION['dataU'])){
+                $UsuarioADM = $_SESSION['dataU'];
+                $AdminR = $UsuarioADM[1];
+                if($AdminR == 1){
+                   ?><a href="/Vista/Admin/IndexAdmin.php">Administración</a><?php
+                }
+            }?>
                 <a href="https://maps.google.com/maps?q=-12.1683381%2C-76.9500709&z=17&hl=es" target="_blank">Visitar Tienda</a>
             </nav>
             </div>
