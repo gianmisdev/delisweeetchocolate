@@ -14,10 +14,7 @@ window.onscroll = () => {
    }
 }
 
-
 // Validar correo
-
-
 function validar() {
    var correo, contrasena;
    correo = document.getElementById("fcorreo").value;
@@ -35,7 +32,6 @@ function validar() {
    }
    return true;
 }
-
 
 // Personalizar brownie
 
@@ -60,12 +56,26 @@ function mostrarcombo() {
    var chkChispitas = document.getElementById("checkChispitas");
 
    //(Condicion) ? True : False;
+   let contador = 10;
+   let resultado= document.getElementById("fcontador");
+  
+ 
    chkbaseChocolate.checked ? elementbaseChocolate.style.display = "block" : elementbaseChocolate.style.display = "none";
+   contador +=  chkbaseChocolate.checked ?  5  :  0; 
    chkMashmellow.checked ? elementMashmellow.style.display = "block" : elementMashmellow.style.display = "none";
+   contador +=  chkMashmellow.checked ?  4 :  0;
+
    chkGrageas.checked ? elementGrageas.style.display = "block" : elementGrageas.style.display = "none";
+   contador += chkGrageas.checked ? 3 :  0;
+
    chkChochips.checked ? elementchochips.style.display = "block" : elementchochips.style.display = "none";
+   contador += chkChochips.checked ? 2 :  0; 
+   
    chkGomitas.checked ? elementGomitas.style.display = "block" : elementGomitas.style.display = "none";
+   contador += chkGomitas.checked ? 2 :  0;
+  
    chkChispitas.checked ? elementChispitas.style.display = "block" : elementChispitas.style.display = "none";
-
-
+   contador += chkChispitas.checked ? 2 :  0;
+   
+   document.getElementById('fcontador').value = contador;
 }

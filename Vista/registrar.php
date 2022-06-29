@@ -7,15 +7,20 @@ if (isset($_POST['registrar'])) {
     $dni = $_POST['fdni'];
     $correo = $_POST['fcorreo'];
     $contraseña = $_POST['fcontraseña'];
-    $query = "CALL pa_agregar_Usuario('','$nombre', '$apellido', '$contraseña', '$dni', '$correo')";
+    $query = "CALL pa_agregar_Usuario('','$nombre', '$apellido', '$contraseña', '$dni', '$correo');";
+      
     $result = mysqli_query($conn, $query);
 
-    if(!$result) {
-      die("Fallo al registrar.");
-    }
+    header('Location: login.php');
 
-    header('Location: login.html');
-
+}else{
+  ?>
+    <?php
+    include("registrarse.html");
+    echo "<script>
+                alert('El correo o DNI ya existen!');
+                window.location= 'registrarse.html'
+    </script>";
 }
 
 ?>
