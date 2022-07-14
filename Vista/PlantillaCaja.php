@@ -12,9 +12,10 @@ if(isset($_SESSION['dataU'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plantilla</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- estilos -->
+    <!--ESTILOS-->
     <link rel="stylesheet" href="estilos/estilos.css">
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body class="body-content">
@@ -155,9 +156,8 @@ if(isset($_SESSION['dataU'])){
             <div>
                 <input type="text" id="Pdiseño" name="PreDiseño" value="S/5.00" disabled="disabled" class="box"></textarea>
             </div>
-
-            <input type="button" name="Regresar" value="Atras" class="btn">
             <input type="submit" name="registrar" value="Siguiente" class="btn">
+            <br><a href="/Vista/Personalizado.php" class="option-btn">Volver</a>
         </form>
     </div>
 

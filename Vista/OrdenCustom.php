@@ -13,8 +13,10 @@ include('conexion.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orden de Pedido</title>   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Estilos -->
+    <!--ESTILOS-->
     <link rel="stylesheet" href="estilos/estilos.css">
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 <body class="body-content">
@@ -97,6 +99,7 @@ include('conexion.php');
                         <input type="text" id="referenciaE" name="PerRef" required class="box">
                     </div>
                     <input type="submit" name="OrdenBrowniePer" value="Siguiente" class="btn"><br>
+                    <br><a href="/Vista/DescPersonalizado.php" class="option-btn">Volver</a>
                 </form>
             </div>
         <?php include('../Vista/includes/footer.php') ?>

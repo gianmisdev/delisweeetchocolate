@@ -20,7 +20,7 @@ require 'C:\xampp\htdocs\Vista\Admin\AdminDB.php';
 
 <body>
     
-    <?php include('../header.php')?>
+<?php include('../header.php')?>
 
 
     <div class="container mt-5">
@@ -60,16 +60,44 @@ require 'C:\xampp\htdocs\Vista\Admin\AdminDB.php';
                                         <input type="text" name="Eapellido" value="<?=$UsuarioA['apellido'];?>" class="form-control">
                                     </div>
                                     <div class="mb-3">
-                                        <label>Contraseña</label>
-                                        <input type="text" name="Econtraseña" value="<?=$UsuarioA['Contraseña'];?>" class="form-control">
-                                    </div>
-                                    <div class="mb-3">
                                         <label>DNI</label>
-                                        <input type="text" name="Edni" value="<?=$UsuarioA['dni'];?>" class="form-control">
+                                        <input type="text" name="Edni" value="<?=$UsuarioA['dni'];?>" pattern="[0-9]{8}" title="Debe contener 8 dígitos" class="form-control">
                                     </div>
                                     <div class="mb-3">
                                         <label>Correo</label>
                                         <input type="email" name="Ecorreo" value="<?=$UsuarioA['correo'];?>" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Celular</label>
+                                        <input type="text" name="Ecelular" pattern="[0-9]{9}" title="Debe contener 9 dígitos" value="<?=$UsuarioA['celular'];?>" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Contraseña</label>
+                                        <input type="text" id="fcontraseña" name="Econtraseña" class="form-control" value="<?=$UsuarioA['Contraseña'];?>" required="" onclick="return showHide();">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Confirmar Contraseña</label>
+                                        <input type="password" id="fccontraseña" name="Eccontraseña" value="<?=$UsuarioA['Contraseña'];?>" onkeyup="check()" class="form-control" required="">
+                                        <p id="alertPassword"></p>
+                                    </div>
+                                    <div class="password-politicas" id="showHideDiv">
+                                        <p>La contraseña debe contener lo siguiente:</p>
+                                        <div class="politica-longitud">
+                                            <i class="fas fa-circle" aria-hidden="true"></i>
+                                            Minimo 8 caracteres
+                                        </div>
+                                        <div class="politica-numero">
+                                            <i class="fas fa-circle" aria-hidden="true"></i>
+                                            Contiene números
+                                        </div>
+                                        <div class="politica-mayuscula">
+                                            <i class="fas fa-circle" aria-hidden="true"></i>
+                                            Contiene mayúscula y minúsculas
+                                        </div>
+                                        <div class="politica-especial">
+                                            <i class="fas fa-circle" aria-hidden="true"></i>
+                                            Contiene caracter especial (!@#$^&amp;*)
+                                        </div>
                                     </div>
                                     <div class="mb-3">
                                         <button type="submit" name="actualizarU" class="btn btn-primary">
@@ -94,6 +122,7 @@ require 'C:\xampp\htdocs\Vista\Admin\AdminDB.php';
 
     <!-- script header -->
     <script src="/Vista/js/script.js"></script>
+    <script src="/Vista/js/password.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

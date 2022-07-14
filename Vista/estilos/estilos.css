@@ -806,7 +806,7 @@ h3{
     background-color: #f7ecd9;
     border-radius: .5rem;
     border: var(--border);
-    padding: 7rem;
+    padding: 3rem;
     max-width: 50rem;
     margin: 5rem auto;
     text-align: center;
@@ -908,6 +908,16 @@ select {
     padding-bottom: 2rem;
     text-align: left;
     font-weight: bold;
+}
+
+.contenedor{
+    background-color: #f7ecd9;
+    border-radius: .5rem;
+    border: var(--border);
+    padding: 3rem;
+    max-width: 110rem;
+    margin: 2rem auto;
+    text-align: center;
 }
 
 /* media queries  */

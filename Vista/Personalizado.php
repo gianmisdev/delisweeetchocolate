@@ -72,6 +72,7 @@ if(empty($_SESSION['dataU'])){
             <h2>PRECIO PARCIAL (S/)</h2><br>
             <input type="number" id="fcontador" name="PreBrownie" readonly class="contbox" value="10"><br>
             <br><input type="submit" name="IngredienteBD" value="Siguiente" class="btn">
+            <br><a href="/Vista/index.php" class="option-btn">Volver</a>
         </form>
     </div>
 

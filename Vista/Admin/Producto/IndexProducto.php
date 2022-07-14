@@ -58,7 +58,7 @@
                                             <tr>
                                                 <td style="text-align:center"><?= $producto['idProducto']; ?></td>
                                                 <td style="text-align:center"><?= $producto['NombreProducto']; ?></td>
-                                                <td style="text-align:center"><?= $producto['PrecioUnitario']; ?></td>
+                                                <td style="text-align:center">S/.<?= $producto['PrecioUnitario']; ?>.00</td>
                                                 <td style="text-align:center"><?= $producto['Descripcion']; ?></td>
                                                 <td style="text-align:center"><?= $producto['Image']; ?></td>
                                                 <td style="text-align:center">

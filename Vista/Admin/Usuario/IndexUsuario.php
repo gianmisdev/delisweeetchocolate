@@ -45,6 +45,7 @@
                                     <th style="text-align:center">Contraseña</th>
                                     <th style="text-align:center">DNI</th>
                                     <th style="text-align:center">Correo</th>
+                                    <th style="text-align:center">Celular</th>
                                     <th style="text-align:center">Fecha registrado</th>
                                     <th style="text-align:center">Accion</th>
                                 </tr>
@@ -67,6 +68,7 @@
                                                 <td style="text-align:center"><?= $usuario['Contraseña']; ?></td>
                                                 <td style="text-align:center"><?= $usuario['dni']; ?></td>
                                                 <td style="text-align:center"><?= $usuario['correo']; ?></td>
+                                                <td style="text-align:center"><?= $usuario['celular']; ?></td>
                                                 <td style="text-align:center"><?= $usuario['FechaRegistro']; ?></td>
                                                 <td style="text-align:center">
                                                     <a href="EditarUsuario.php?idUsuario=<?= $usuario['idUsuario']; ?>" class="btn btn-success btn-sm">Editar</a>

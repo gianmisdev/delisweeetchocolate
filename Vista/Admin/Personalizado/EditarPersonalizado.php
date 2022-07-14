@@ -38,7 +38,7 @@ require 'C:\xampp\htdocs\Vista\Admin\AdminDB.php';
                         if(isset($_GET['idPedido']))
                         {
                             $PedidoID = mysqli_real_escape_string($conn, $_GET['idPedido']);
-                            $ConsultaE = "select p.idPedido, Estado from pedido p
+                            $ConsultaE = "select p.idPedido, Estado, FechaEntrega from pedido p
                             INNER JOIN brownie_personalizado b on p.idPedido=b.idPedido
                             WHERE p.idPedido='$PedidoID';";
                             $ResultadoE = mysqli_query($conn, $ConsultaE);
@@ -51,7 +51,11 @@ require 'C:\xampp\htdocs\Vista\Admin\AdminDB.php';
                                     <input type="hidden" name="PerId" value="<?= $Personalizado['idPedido']; ?>">
                                     <div class="mb-3">
                                         <label>Estado del Pago:</label>
-                                        <input type="text" name="PerEst" value="<?=$Personalizado['Estado'];?>" class="form-control">
+                                        <input type="text" name="PerEst" value="<?=$Personalizado['Estado'];?>" Placeholder="Pago o Pendiente" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Ingrese Fecha de Entrega:</label>
+                                        <input type="text" name="PerFecha" value="<?=$Personalizado['FechaEntrega'];?>" Placeholder="31/12/2022" class="form-control" Required>
                                     </div>
                                     <div class="mb-3">
                                         <button type="submit" name="actualizarPersonalizado" class="btn btn-primary">

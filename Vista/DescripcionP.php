@@ -24,6 +24,8 @@ $_SESSION['dataP'] = $data;
     <title>Detalles</title>
     <!--ESTILOS-->
     <link rel="stylesheet" href="estilos/estilos.css">
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="body-content">
     <?php include('../Vista/includes/header.php') ?>
@@ -43,6 +45,7 @@ $_SESSION['dataP'] = $data;
         <h1>Elija su cantidad</h1>
         <input type="number" id="fcan" name="Scantidad" max="10" min="1" required class="box">
         <input type="submit" name="CalOrden" value="Siguiente" class="btn">
+        <br><a href="/Vista/index.php" class="option-btn">Volver</a>
     </form>
     </div>
     <?php include('../Vista/includes/footer.php') ?>

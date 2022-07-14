@@ -47,9 +47,19 @@ include('conexion.php');
                     <a href="\Vista\Index.php"><img src="img/logo.png"></a>
                 </div>
             <!--BURGER NAVBAR INICIO-->
+            <script>
+                $(document).ready(function() {
+                $('a[href^="#"]').click(function() {
+                    var destino = $(this.hash); //this.hash lee el atributo href de este
+                    $('html, body').animate({ scrollTop: destino.offset().top }, 700); //Llega a su destino con el tiempo deseado
+                    return false;
+                });
+                });
+            </script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
                 <nav class="navbar">
                     <a href="\Vista\Index.php">Catálogo</a>
-                    <a href="#">Nosotros</a>
+                    <a href="#footer">Nosotros</a>
                     <?php
                     if(isset($_SESSION['dataU'])){
                         $UsuarioADM = $_SESSION['dataU'];

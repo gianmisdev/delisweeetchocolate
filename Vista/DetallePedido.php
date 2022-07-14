@@ -15,7 +15,7 @@ if (isset($_POST['OrdenNext'])) {
 
     $InfoEnvio = "insert into informacion_envio(DireccionEnvio, CodigoPostal, Referencia)values('$Direccion', '$CodigoPostal', '$Referencia');";
     $ResEnvio = mysqli_query($conn, $InfoEnvio);
-    $Pedido = "insert into pedido(FechaEntrega, idEnvio, total, idUsuario)values((select DATE_ADD(NOW(),INTERVAL 2 DAY)), (SELECT MAX(idEnvio) AS id FROM informacion_envio), '$Total', '$IDusuario')";
+    $Pedido = "insert into pedido(idEnvio, total, idUsuario)values((SELECT MAX(idEnvio) AS id FROM informacion_envio), '$Total', '$IDusuario')";
     $ResPedido = mysqli_query($conn, $Pedido);
     $DetallePedido = "insert into detalle_pedido(idPedido, idProducto, PrecioUnitario, Cantidad, Importe, PrecioEnvio, SubTotal)values((select MAX(idPedido) AS id FROM pedido), '$IDproducto', '$Precio', '$Cantidad', '$Importe', '$Envio', '$Total');";
     $ResDetalle = mysqli_query($conn, $DetallePedido);

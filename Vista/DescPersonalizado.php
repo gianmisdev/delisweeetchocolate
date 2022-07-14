@@ -23,8 +23,11 @@ $_SESSION['dataC'] = $CajaData;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalles Personalizado</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Estilos -->
+    <!--ESTILOS-->
     <link rel="stylesheet" href="estilos/estilos.css">
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
 </head>
 <body class="body-content">
     <?php include('../Vista/includes/header.php') ?>
@@ -49,6 +52,7 @@ $_SESSION['dataC'] = $CajaData;
         <h1>Proporcione su cantidad:</h1>
         <input type="number" id="fcan" name="PerCantidad" max="10" min="1" required class="box">
         <input type="submit" name="CalOrdenPer" value="Siguiente" class="btn">
+        <br><a href="/Vista/PlantillaCaja.php" class="option-btn">Volver</a>
     </form>
     </div>
     <?php include('../Vista/includes/footer.php') ?>

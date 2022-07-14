@@ -27,7 +27,8 @@ if(isset($_POST['actualizarPedido']))
 {
     $PedidoID = mysqli_real_escape_string($conn, $_POST['Pid']);
     $Estado = mysqli_real_escape_string($conn, $_POST['Pest']);
-    $conA = "update pedido set Estado='$Estado' where idPedido='$PedidoID'";
+    $Fecha = mysqli_real_escape_string($conn, $_POST['Pfecha']);
+    $conA = "update pedido set Estado='$Estado', FechaEntrega='$Fecha' where idPedido='$PedidoID'";
     $resA = mysqli_query($conn, $conA);
 
     if($resA)

@@ -22,8 +22,8 @@ if (isset($_POST['OrdenBrowniePer'])) {
     $InfoEnvio = "insert into informacion_envio(DireccionEnvio, CodigoPostal, Referencia)values('$Direccion', '$CodigoPostal', '$Referencia');";
     $ResEnvio = mysqli_query($conn, $InfoEnvio);
     //INSERT TABLA PEDIDO
-    $PedidoPersonalizado = "insert into pedido(FechaEntrega, idEnvio, total, idUsuario)
-    values((select DATE_ADD(NOW(),INTERVAL 2 DAY)), (SELECT MAX(idEnvio) AS id FROM informacion_envio), '$Total', '$IDusuario')";
+    $PedidoPersonalizado = "insert into pedido(idEnvio, total, idUsuario)
+    values((SELECT MAX(idEnvio) AS id FROM informacion_envio), '$Total', '$IDusuario')";
     $ResPedido = mysqli_query($conn, $PedidoPersonalizado);
     //INSERT TABLA BROWNIE_PERSONALIZADO
     $DetallePersonalizado = "insert into brownie_personalizado(idIngrediente, idCaja, idPedido, PrecioPersonalizado, CantidadPersonalizado, ImportePersonalizado, Envio, SubTotalPer)

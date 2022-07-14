@@ -15,6 +15,8 @@ include('conexion.php');
     <title>Orden de Pedido</title>   
     <!--ESTILOS-->
     <link rel="stylesheet" href="estilos/estilos.css">
+    <!-- link font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 <body class="body-content">
@@ -58,9 +60,10 @@ include('conexion.php');
                     <input type="hidden" name="Pigv" value="<?= $IGV; ?>">
                     <input type="hidden" name="Penv" value="<?= $Envio; ?>">
                     <input type="hidden" name="Ptot" value="<?= $Tot; ?>">
+                    <input type="hidden" name="Pcan" value="<?= $CAN; ?>">
                     <div>
                         <label for="fcan">Cantidad:</label>
-                        <input type="text" id="fcan" name="Pcan" value="<?=$CAN;?>" disabled="disabled" required class="box">
+                        <input type="text" id="fcan" name="Pcantidad" value="<?=$CAN;?>" disabled="disabled" required class="box">
                     </div>
                     <div>
                         <label for="fsub">SubTotal:</label>
@@ -85,6 +88,7 @@ include('conexion.php');
                         <input type="text" id="referenciaE" name="Pref" required class="box">
                     </div>
                     <input type="submit" name="OrdenNext" value="Siguiente" class="btn"><br>
+                    <br><a href="DescripcionP.php?idProducto=<?=$ProductoD[0];?>" class="option-btn">Volver</a>>
                 </form>
             </div>
         <?php include('../Vista/includes/footer.php') ?>

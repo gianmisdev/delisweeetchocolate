@@ -29,7 +29,7 @@ if(isset($_SESSION['dataU'])){
             </div>
             <div>
                 <label for="fcontraseña">Contraseña</label>
-                <input type="text" id="fcontraseña" name="fcontraseña" required class="box">
+                <input type="password" id="fcontraseña" name="fcontraseña" required class="box">
             </div>
             <div><br>
                 <div class="forgotpass chkespacio"><input type="checkbox" name="frecuerda"><label for="frecuerda">&nbsp;Recuérdame</label></div>

@@ -1,5 +1,5 @@
 <!-- Footer -->
-<section class="footer">
+<section class="footer" id="footer">
     <div class="box-container">
         <div class="box">
             <div class="logo">

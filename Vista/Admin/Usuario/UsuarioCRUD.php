@@ -32,8 +32,9 @@ if(isset($_POST['actualizarU']))
     $contraseña = mysqli_real_escape_string($conn, $_POST['Econtraseña']);
     $dni = mysqli_real_escape_string($conn, $_POST['Edni']);
     $correo = mysqli_real_escape_string($conn, $_POST['Ecorreo']);
+    $celular = mysqli_real_escape_string($conn, $_POST['Ecelular']);
 
-    $conA = "update usuario set idRol='$rol',nombre='$nombre',apellido='$apellido',Contraseña='$contraseña',dni='$dni',correo='$correo' where idUsuario='$UsuarioID'";
+    $conA = "update usuario set idRol='$rol',nombre='$nombre',apellido='$apellido',Contraseña='$contraseña',dni='$dni',correo='$correo', celular='$celular' where idUsuario='$UsuarioID'";
     $resA = mysqli_query($conn, $conA);
 
     if($resA)
@@ -59,8 +60,9 @@ if(isset($_POST['AgregarU']))
     $contraseña = mysqli_real_escape_string($conn, $_POST['Acontraseña']);
     $dni = mysqli_real_escape_string($conn, $_POST['Adni']);
     $correo = mysqli_real_escape_string($conn, $_POST['Acorreo']);
+    $celular = mysqli_real_escape_string($conn, $_POST['Acelular']);
 
-    $conG = "CALL pa_agregar_Usuario('','$nombre', '$apellido', '$contraseña', '$dni', '$correo');";
+    $conG = "CALL pa_agregar_Usuario('','$nombre', '$apellido', '$contraseña', '$dni', '$correo', '$celular');";
  
     $resG = mysqli_query($conn, $conG);
     if($resG)

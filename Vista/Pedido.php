@@ -54,7 +54,7 @@ $conn = mysqli_connect(
         ?>
         <div class="form-Pedido">
             <form action="/Vista/Inicio.php" method="post">
-                <h3>Pedido Completado</h3>
+                <h3>Pedido Generado</h3>
                 <div>
                     <label for="NA">Nombre y Apellidos:</label>
                     <input type="text" id="NA" name="NA" value="<?php echo "$Pedido[0] $Pedido[1]"?>" disabled="disabled" required class="box">
@@ -65,16 +65,18 @@ $conn = mysqli_connect(
                 </div>
                 <div>
                     <label for="T">Pago Total:</label>
-                    <input type="text" id="T" name="T" value="<?php echo "S/$Pedido[3]"?>" disabled="disabled" required class="box">
+                    <input type="text" id="T" name="T" value="<?php echo "S/$Pedido[3]0"?>" disabled="disabled" required class="box">
                 </div>
                 <div>
-                    <label for="F">Fecha de entrega estimada:</label>
-                    <input type="text" id="F" name="F" value="<?php echo "$Pedido[4]"?>" disabled="disabled" required class="box">
+                    <p>La fecha de entrega será designada una vez se confirme el pago del pedido, se le comunicará a su número de celular.</p>
                 </div>
                 <h3>¡Gracias por elegirnos!</h3>
                 <div>
-                    <p>Su pedido ha sido un éxito y está siendo procesado, la preparación de su entrega puede tomar hasta 2 días hábiles.</p>
-                    <p>Si desea visitarnos y conocer más de nuestros productos puede ir a nuestra tienda local.</p><br>
+                    <p>Su pedido ha sido generado, puede ver sus pedidos y su fecha de entrega desde el botón "Ver mis Pedidos". En su Perfil de usuario también se encuentra.</p>
+                </div>
+                <a href="/Vista/Estado.php" class="option-btn">Ver mis Pedidos</a>
+                <div>
+                    <p>Si desea visitarnos y conocer más de nuestros productos puede ir a nuestra tienda local.</p>
                     <p>Horario: Desde las 07:00am hasta las 10:00pm</p>
                     <p>Direccion: Av. El Sol 2-196, Villa María del Tiunfo</p>
                     <p>Referencia: Altura de la estación Villa María, cerca del colegio Santa María.</p><br>

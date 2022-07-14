@@ -21,7 +21,6 @@
     
     <?php include('../header.php')?>
 
-
     <div class="container mt-4">
         <?php include('MensajeBro.php'); ?>
 
@@ -36,12 +35,11 @@
                         <table class="table table-bordered border-primary" style='font-size:150%'>
                             <thead>
                                 <tr class="table-info">
-                                    <th style="text-align:center">Nombre</th>
-                                    <th style="text-align:center">Apellido</th>
+                                    <th style="text-align:center">Nombres Completos</th>
                                     <th style="text-align:center">DNI</th>
+                                    <th style="text-align:center">Celular</th>
                                     <th style="text-align:center">Brownie Personalizado</th>
-                                    <th style="text-align:center">Plantilla</th>
-                                    <th style="text-align:center">Mensaje</th>
+                                    <th style="text-align:center">Caja</th>
                                     <th style="text-align:center">Cantidad</th>
                                     <th style="text-align:center">Total</th>
                                     <th style="text-align:center">Dirección</th>
@@ -64,14 +62,13 @@
                                         {
                                             ?>
                                             <tr>
-                                                <td style="text-align:center"><?= $Personalizado['nombre']; ?></td>
-                                                <td style="text-align:center"><?= $Personalizado['apellido']; ?></td>
+                                                <td style="text-align:center"><?= $Personalizado['nombre']; ?> <?= $Personalizado['apellido']; ?></td>
                                                 <td style="text-align:center"><?= $Personalizado['dni']; ?></td>
-                                                <td style="text-align:center">Brownie decorado con <?= $Personalizado['NombreIngrediente']; ?></td>
-                                                <td style="text-align:center"><?= $Personalizado['NombrePlantilla']; ?></td>
-                                                <td style="text-align:center"><?= $Personalizado['Mensaje']; ?></td>
+                                                <td style="text-align:center"><?= $Personalizado['celular']; ?></td>
+                                                <td style="text-align:center">Brownie decorado con <?= $Personalizado['NombreIngrediente']; ?>.</td>
+                                                <td style="text-align:center">La plantilla es "<?= $Personalizado['NombrePlantilla']; ?>" y su mensaje "<?= $Personalizado['Mensaje']; ?>".</td>
                                                 <td style="text-align:center"><?= $Personalizado['CantidadPersonalizado']; ?></td>
-                                                <td style="text-align:center"><?= $Personalizado['SubtotalPer']; ?></td>
+                                                <td style="text-align:center">S/.<?= $Personalizado['SubtotalPer']; ?></td>
                                                 <td style="text-align:center"><?= $Personalizado['DireccionEnvio']; ?></td>
                                                 <td style="text-align:center"><?= $Personalizado['CodigoPostal']; ?></td>
                                                 <td style="text-align:center"><?= $Personalizado['Referencia']; ?></td>

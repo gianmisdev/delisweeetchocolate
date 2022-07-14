@@ -12,7 +12,6 @@
                     <a href="/Vista/Admin/Producto/IndexProducto.php">Producto</a>
                     <a href="/Vista/Admin/Pedido/IndexPedido.php">Pedido</a>
                     <a href="/Vista/Admin/Personalizado/IndexPersonalizado.php">Brownie Personalizado</a>
-                    <a href="/Vista/index.php">Volver Tienda</a>
                 </nav>
                 <div class="icons">
                     <div id="menu-btn" class="fas fa-bars"></div>                   

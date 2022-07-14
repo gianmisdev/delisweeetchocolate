@@ -38,7 +38,7 @@ require 'C:\xampp\htdocs\Vista\Admin\AdminDB.php';
                         if(isset($_GET['idPedido']))
                         {
                             $PedidoID = mysqli_real_escape_string($conn, $_GET['idPedido']);
-                            $ConsultaE = "select idPedido, Estado from pedido WHERE idPedido='$PedidoID';";
+                            $ConsultaE = "select idPedido, Estado, FechaEntrega from pedido WHERE idPedido='$PedidoID';";
                             $ResultadoE = mysqli_query($conn, $ConsultaE);
 
                             if(mysqli_num_rows($ResultadoE) > 0)
@@ -50,6 +50,10 @@ require 'C:\xampp\htdocs\Vista\Admin\AdminDB.php';
                                     <div class="mb-3">
                                         <label>Estado del Pago:</label>
                                         <input type="text" name="Pest" value="<?=$PedidoA['Estado'];?>" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Ingrese Fecha de Entrega:</label>
+                                        <input type="text" name="Pfecha" value="<?=$PedidoA['FechaEntrega'];?>" placeholder="31/12/2022" class="form-control">
                                     </div>
                                     <div class="mb-3">
                                         <button type="submit" name="actualizarPedido" class="btn btn-primary">

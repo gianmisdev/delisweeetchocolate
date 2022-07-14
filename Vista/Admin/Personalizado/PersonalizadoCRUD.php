@@ -27,7 +27,8 @@ if(isset($_POST['actualizarPersonalizado']))
 {
     $PedidoID = mysqli_real_escape_string($conn, $_POST['PerId']);
     $EstadoP = mysqli_real_escape_string($conn, $_POST['PerEst']);
-    $ConP = "update pedido set Estado='$EstadoP' where idPedido='$PedidoID'";
+    $FechaP = mysqli_real_escape_string($conn, $_POST['PerFecha']);
+    $ConP = "update pedido set Estado='$EstadoP', FechaEntrega='$FechaP' where idPedido='$PedidoID'";
     $ResP = mysqli_query($conn, $ConP);
 
     if($ResP)

@@ -21,7 +21,7 @@ session_start();
 
 <body>
     
-    <?php include('../header.php')?>
+<?php include('../header.php')?>
 
 
     <div class="container mt-5">
@@ -38,29 +38,56 @@ session_start();
                         <form action="UsuarioCRUD.php" method="POST">
 
                             <div class="mb-3">
-                                <label>Nombre</label>
-                                <input type="text" name="Anombre" class="form-control">
+                                <label>Nombres</label>
+                                <input type="text" name="Anombre" class="form-control" required class="box">
                             </div>
                             <div class="mb-3">
-                                <label>Apellido</label>
-                                <input type="text" name="Aapellido" class="form-control">
+                                <label>Apellidos</label>
+                                <input type="text" name="Aapellido" class="form-control" required class="box">
                             </div>
                             <div class="mb-3">
                                 <label>DNI</label>
-                                <input type="text" name="Adni" class="form-control">
+                                <input type="text" name="Adni" pattern="[0-9]{8}" title="Debe contener 8 dígitos" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <label>Correo</label>
-                                <input type="email" name="Acorreo" class="form-control">
+                                <input type="email" name="Acorreo" class="form-control" required class="box">
+                            </div>
+                            <div class="mb-3">
+                                <label>Celular</label>
+                                <input type="text" name="Acelular" pattern="[0-9]{9}" title="Debe contener 9 dígitos" class="form-control" required class="box">
                             </div>
                             <div class="mb-3">
                                 <label>Contraseña</label>
-                                <input type="text" name="Acontraseña" class="form-control">
+                                <input type="text" id="fcontraseña" name="Acontraseña" class="form-control" required="" onclick="return showHide();">
+                            </div>
+                            <div class="mb-3">
+                                <label>Confirmar Contraseña</label>
+                                <input type="password" id="fccontraseña" name="fccontraseña" onkeyup="check()" class="form-control" required="">
+                                <p id="alertPassword"></p>
+                            </div>
+                            <div class="password-politicas" id="showHideDiv">
+                                <p>La contraseña debe contener lo siguiente:</p>
+                                <div class="politica-longitud">
+                                    <i class="fas fa-circle" aria-hidden="true"></i>
+                                    Minimo 8 caracteres
+                                </div>
+                                <div class="politica-numero">
+                                    <i class="fas fa-circle" aria-hidden="true"></i>
+                                    Contiene números
+                                </div>
+                                <div class="politica-mayuscula">
+                                    <i class="fas fa-circle" aria-hidden="true"></i>
+                                    Contiene mayúscula y minúsculas
+                                </div>
+                                <div class="politica-especial">
+                                    <i class="fas fa-circle" aria-hidden="true"></i>
+                                    Contiene caracter especial (!@#$^&amp;*)
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <button type="submit" name="AgregarU" class="btn btn-primary">Guardar Usuario</button>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -68,8 +95,7 @@ session_start();
         </div>
     </div>
 
-
-    <script src="/Vista/js/script.js"></script>
+    <script src="/Vista/js/password.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 

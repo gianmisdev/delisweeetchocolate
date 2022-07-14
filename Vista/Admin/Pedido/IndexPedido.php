@@ -36,19 +36,18 @@
                         <table class="table table-bordered border-primary" style='font-size:150%'>
                             <thead>
                                 <tr class="table-info">
-                                    <th style="text-align:center">Nombre</th>
-                                    <th style="text-align:center">Apellido</th>
+                                    <th style="text-align:center">Nombres Completos</th>
                                     <th style="text-align:center">DNI</th>
+                                    <th style="text-align:center">Celular</th>
                                     <th style="text-align:center">Producto</th>
-                                    <th style="text-align:center">Precio Unitario</th>
+                                    <th style="text-align:center">Cantidad</th>
+                                    <th style="text-align:center">Total</th>
                                     <th style="text-align:center">Dirección de Envío</th>
                                     <th style="text-align:center">Código Postal</th>
                                     <th style="text-align:center">Referencia</th>
                                     <th style="text-align:center">Fecha Creada</th>
                                     <th style="text-align:center">Fecha de Entrega</th>
                                     <th style="text-align:center">Estado de Pago</th>
-                                    <th style="text-align:center">Cantidad</th>
-                                    <th style="text-align:center">Total</th>
                                     <th style="text-align:center">Accion</th>
                                 </tr>
                             </thead>
@@ -63,19 +62,18 @@
                                         {
                                             ?>
                                             <tr>
-                                                <td style="text-align:center"><?= $pedido['nombre']; ?></td>
-                                                <td style="text-align:center"><?= $pedido['apellido']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['nombre']; ?> <?= $pedido['apellido']; ?></td>
                                                 <td style="text-align:center"><?= $pedido['dni']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['celular']; ?></td>
                                                 <td style="text-align:center"><?= $pedido['NombreProducto']; ?></td>
-                                                <td style="text-align:center"><?= $pedido['PrecioUnitario']; ?></td>
+                                                <td style="text-align:center"><?= $pedido['Cantidad']; ?></td>
+                                                <td style="text-align:center">S/.<?= $pedido['Subtotal']; ?></td>
                                                 <td style="text-align:center"><?= $pedido['DireccionEnvio']; ?></td>
                                                 <td style="text-align:center"><?= $pedido['CodigoPostal']; ?></td>
                                                 <td style="text-align:center"><?= $pedido['Referencia']; ?></td>
                                                 <td style="text-align:center"><?= $pedido['FechaCreacion']; ?></td>
                                                 <td style="text-align:center"><?= $pedido['FechaEntrega']; ?></td>
                                                 <td style="text-align:center"><?= $pedido['Estado']; ?></td>
-                                                <td style="text-align:center"><?= $pedido['Cantidad']; ?></td>
-                                                <td style="text-align:center"><?= $pedido['Subtotal']; ?></td>
                                                 <td style="text-align:center">
                                                     <a href="EditarPedido.php?idPedido=<?= $pedido['idPedido']; ?>" class="btn btn-success btn-sm">Editar</a>
                                                     <form action="PedidoCRUD.php" method="POST" class="d-inline">
@@ -100,9 +98,7 @@
             </div>
         </div>
     </div>
-
-
-
+    
     <!-- script header -->
     <script src="/Vista/js/script.js"></script>
     <!-- bootstrap -->
